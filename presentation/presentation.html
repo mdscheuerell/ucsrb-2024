@@ -37,6 +37,826 @@ class: center, middle, inverse, title-slide
 
 
 
+
+# Collaborators
+
+.pull-left[
+
+### .green[ Brett Bowersox (IDFG) ]
+
+### .green[ Dan Brewer (USFWS) ]
+
+### .blue[ Erin Britton-Kuttel (USFWS) ]
+
+### .blue[ Sean Finn (USFWS) ]
+
+### .green[ Stephanie Gunckel (ODFW) ]
+
+]
+
+.pull-right[
+
+### .blue[ Craig Hansen (USFWS) ]
+
+### .blue[ Rebecca Migala (USFWS) ]
+
+### .blue[ Dan Nolfi (USFWS) ]
+
+### .green[ Marie Winkowski (WDFW) ]
+
+### .blue[ Alan Yanahan (USFWS) ]
+
+]
+
+
+---
+
+class: middle
+
+# Endangered Species Act of 1973
+
+&gt; ## The purpose of the ESA is to protect and recover imperiled species and the ecosystems upon which they depend.
+
+
+---
+
+class: inverse, center, middle
+
+# There are over 1500 species listed under the Endangered Species Act
+
+
+---
+
+# ESA status reviews
+
+.blue[
+### Required every 5 years to ensure appropriate protections
+
+### Considerations include
+]
+
+* ### population trends, distribution, demographics &amp; genetics
+
+* ### habitat conditions
+
+* ### past conservation measures
+
+* ### status &amp; trends of threats
+
+
+---
+
+# ESA status reviews
+
+.gray[
+### Required every 5 years to ensure appropriate protections
+
+### Considerations include
+]
+
+* ### .green[population trends].gray[, distribution, demographics &amp; genetics]
+
+.gray[
+* ### habitat conditions
+
+* ### past conservation measures
+
+* ### status &amp; trends of threats
+]
+
+
+---
+
+class: inverse, center, middle
+
+# Surely listed species are closely monitored?
+
+
+---
+
+class: frimg
+background-image: url(figs/no_evil.jpg)
+background-size: 90%
+
+
+---
+
+# The data are gappy
+
+&lt;img src="presentation_files/figure-html/data_gappy-1.png" width="100%" height="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+# The data are noisy
+
+&lt;br&gt;
+
+.center[
+.green[
+## non-exhaustive surveys
+]
+.blue[
+## undetected individuals
+]
+.orange[
+## misidentified individuals
+]
+]
+
+
+---
+
+# The data are disparate
+
+&lt;br&gt;
+
+.center[
+.green[
+## direct vs remotely sensed
+]
+.blue[
+## design-based vs opportunistic
+]
+.orange[
+## scientific surveys vs recreational sampling
+]
+]
+
+
+---
+
+class: middle
+
+.blue[
+&gt; # How can we use this information to inform decisions?
+]
+.green[
+&gt; # For trends over time, one option is a state-space model
+]
+
+
+---
+
+# Part 1: State model
+
+## Describes the .blue[true state of nature] over time
+
+&lt;img src="presentation_files/figure-html/state_diag-1.png" width="100%" height="100%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# States of nature might be
+
+&lt;br&gt;
+
+.center[
+.green[
+## Animal location
+]
+.blue[
+## Species density
+]
+.orange[
+## Age structure
+]
+.purple[
+## Reproductive status
+]
+]
+
+
+---
+
+class: frimg, center, bottom, black-back
+background-image: url(figs/venice_carnival.jpg)
+background-size: 100%
+
+## .white[Revealing the true state requires observations]
+### .black[-]
+
+---
+
+class: center, middle, inverse
+
+# Observing nature can be easy
+
+---
+
+class: frimg, bottom, right
+background-image: url(figs/sockeye.jpg)
+background-size: cover
+
+# .white[How many sockeye are there?]
+
+---
+
+class: center, middle, inverse
+
+# Observing nature can also be hard
+
+---
+
+class: frimg, bottom, right
+background-image: url(figs/sockeye.jpg)
+background-size: cover
+
+# .white[How many mayflies are there?]
+
+---
+
+# Part 2: Observation model
+
+## .purple[Data] = .blue[Truth] &amp;#177; .red[Errors]
+
+---
+
+# Part 2: Observation model
+
+## .purple[Data] = .blue[Truth] &amp;#177; .red[Errors]
+
+&lt;img src="presentation_files/figure-html/obs_diag-1.png" width="100%" height="100%" style="display: block; margin: auto;" /&gt;
+
+---
+
+class: inverse, center, middle
+
+# OK, but why bother?
+
+---
+
+# Advantages
+
+## 1. Can combine many different .purple[data types]
+
+.center.purple[
+### Changes in observers or sensors
+
+### Varying survey locations &amp; effort
+
+### Direct &amp; remote sampling  
+]
+
+---
+
+# Advantages
+
+## 2. .gray[Missing data] are easily accommodated
+
+&lt;img src="presentation_files/figure-html/obs_NA-1.png" width="90%" height="90%" style="display: block; margin: auto;" /&gt;
+
+---
+
+class: frimg
+background-image: url(figs/Jonsen2016.png)
+background-position: 50% 60%
+background-size: 70%
+
+# Advantages
+
+## 3. Improved accuracy &amp; precision
+
+---
+
+class: frimg
+background-image: url(figs/robin.jpg)
+background-position: 50% 80%
+background-size: 40%
+
+# Advantages
+
+## 4. .gray[Data-poor] benefit from .green[data-rich]
+
+
+---
+
+class: inverse, center, middle
+
+# Bull trout in the Pacific Northwest
+
+
+---
+
+class: frimg
+background-image: url(figs/bull_trout_art.png)
+background-position: 50% 90%
+background-size: 60%
+
+# Bull trout *Salvelinus confluentus*
+
+.green[
+### Native to the Pacific Northwest &amp; Canada
+
+### 4 different life histories (resident, riverine, lacustrine, anadromous)
+
+### Mature at 4-7 years of age
+
+### Listed as threatened under the ESA in 1999
+]
+
+
+---
+
+class: frimg, inverse
+background-image: url(figs/bull_trout_range_map.jpg)
+background-position: 50% 50%
+background-size: cover
+
+
+---
+
+class: inverse, center, middle
+
+# Model for the state of nature
+
+
+---
+
+# Simple model of population dynamics
+
+### .blue[Exponential growth/decline in continuous time]
+
+`$$N(t) = N_0 ~ \underbrace{\exp(u)}_{\substack{\text{rate of} \\ \text{change}}} \underbrace{\exp(w t)}_{\substack{\text{stochastic} \\ \text{environment}}}$$`
+
+
+---
+
+# Simple model of population dynamics
+
+### .blue[In discrete time, with a time step of 1 year]
+
+`$$N_t = N_{t-1} \exp(u + w_t)$$`
+
+
+---
+
+# Simple model of population dynamics
+
+### .blue[In discrete time, with a time step of 1 year]
+
+`$$N_t = N_{t-1} \exp(u + w_t)$$`
+
+### .blue[and on a log scale]
+
+`$$\log (N_t) = \log (N_{t-1}) + u + w_t$$`
+
+### .blue[which we can rewrite as]
+
+`$$x_t = x_{t-1} + u + w_t$$`
+
+
+---
+
+# Biased random walk
+
+### .blue[If we assume that the errors are white noise]
+
+`$$w_t \sim \text{N}(0, q)$$`
+
+
+---
+
+# Biased random walk
+
+### .blue[If we assume that the errors are white noise]
+
+`$$w_t \sim \text{N}(0, q)$$`
+
+### .blue[ then our model of populations dynamics]
+
+`$$x_t = x_{t-1} + u + w_t$$`
+
+### .blue[is known as a] *biased random walk*
+
+
+---
+
+# Examples of biased random walks
+
+`$$x_t = x_{t-1} + \text{bias} \pm \text{error}$$`
+
+
+```r
+x1 &lt;- cumsum(rnorm(30, 0.1, 0.3)) + 10
+
+x2 &lt;- cumsum(rnorm(30, -0.1, 0.3)) + 10
+
+clr1 &lt;- c("#c6dbef",
+          "#9ecae1",
+          "#6baed6",
+          "#4292c6",
+          "#2171b5",
+          "#08519c",
+          "#08306b")
+
+clr2 &lt;- c("#fcbba1",
+          "#fc9272",
+          "#fb6a4a",
+          "#ef3b2c",
+          "#cb181d",
+          "#a50f15",
+          "#67000d")
+
+par(mfrow = c(1,2), mai = c(1, 1, 0.75, 0.3))
+plot.ts(x1, las = 1, col = "dodgerblue", lwd = 2, ylim = c(8, 16),
+        ylab = expression(italic(x[t])), main = "")
+mtext("Positive bias", side = 3, line = 1, cex = 2)
+for(i in 1:6) {
+  lines(cumsum(rnorm(30, 0.1, 0.3)) + 10,
+        col = clr1[i], lwd = 2)
+}
+
+plot.ts(x2, las = 1, col = "indianred", lwd = 2,  ylim = c(4, 12),
+        ylab = expression(italic(x[t])), main = "")
+mtext("Negative bias", side = 3, line = 1, cex = 2)
+for(i in 1:6) {
+  lines(cumsum(rnorm(30, -0.1, 0.3)) + 10,
+        col = clr2[i], lwd = 2)
+}
+```
+
+&lt;img src="presentation_files/figure-html/ex_biased_rw-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+class: inverse, center, middle
+
+# Observation (data) model
+
+
+---
+
+# Observation model
+
+### .blue[ In log-space ]
+
+`$$\large{\underbrace{y_t}_{\substack{\text{observed} \\ \text{counts}}} = \underbrace{x_t}_{\substack{\text{true} \\ \text{counts}}} + \underbrace{v_t}_{\substack{\text{observer} \\ \text{error}}} ~~ \text{with} ~~ v_t \sim \text{N}(0, r)}$$`
+
+
+---
+
+# Ex: biased random walk with obs error
+
+
+```r
+y1 &lt;- x1 + rnorm(30, 0, 0.4)
+
+y2 &lt;- x2 + rnorm(30, 0, 0.4)
+
+par(mfrow = c(1,2), mai = c(1, 1, 0.75, 0))
+plot.ts(x1, las = 1, col = "gray", lwd = 3, ylim = c(9, 15), # range(x1, y1),
+        ylab = expression(italic(x[t])), main = "")
+mtext("Positive bias", side = 3, line = 1, cex = 2)
+lines(y1, col = "dodgerblue", lwd = 3)
+
+plot.ts(x2, las = 1, col = "gray", lwd = 3, ylim = c(6, 11), # range(x2, y2),
+        ylab = expression(italic(x[t])), main = "")
+mtext("Negative bias", side = 3, line = 1, cex = 2)
+lines(y2, col = "indianred", lwd = 3)
+```
+
+&lt;img src="presentation_files/figure-html/ex_biased_rw_y-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+class: inverse, center, middle
+
+# Multiple time series of abundance
+
+
+---
+
+class: center
+
+&lt;br&gt;
+
+# The survey data are hierarchical
+
+## .blue[ 4 states ]
+
+## .purple[ 6 recovery units ]
+
+## .orange[ 62 core areas ]
+
+## .green[ 242 populations ]
+
+
+---
+
+# State model for multiple core areas
+
+## .center.blue[ Each _core area_ gets its own model ]
+
+`$$\begin{gathered}
+    x_{1,t} = x_{1,t-1} + u_1 + w_{1,t} \\
+    x_{2,t} = x_{2,t-1} + u_2 + w_{2,t} \\
+    \vdots \\
+    x_{n,t} = x_{n,t-1} + u_n + w_{n,t} \\
+  \end{gathered}$$`
+
+
+---
+
+# Observation model for multiple time series
+
+## .blue[ Core areas comprise 1-22 populations ]
+
+## .blue[ Each population is considered an observation from its respective core area ]
+
+
+---
+
+# Observation model for multiple time series
+
+## .center.blue[ Example of 5 popns across 2 core areas (A &amp; B) ]
+
+`$$\begin{gathered}
+    y_{1,t} = x_{A,t} + v_{1,t} \\
+    y_{2,t} = x_{A,t} + v_{2,t} \\
+    \hline 
+    y_{3,t} = x_{B,t} + v_{3,t} \\
+    y_{4,t} = x_{B,t} + v_{4,t} \\
+    y_{5,t} = x_{B,t} + v_{5,t}
+  \end{gathered}$$`
+
+---
+
+# Example: 3 observations of a common state
+
+
+```r
+y2 &lt;- x1 + rnorm(30, 0, 0.4)
+y3 &lt;- x1 + rnorm(30, 0, 0.5)
+
+## set colormap
+clr &lt;- viridisLite::mako(4, begin = 0.4, end = 0.9)
+
+par(mai = c(1, 1, 0.1, 0.1))
+
+plot.ts(x1, las = 1, col = "gray", lwd = 3, ylim = range(x1, y1, y2, y3),
+        ylab = expression(paste(italic(x[t]), "  or  ", italic(y[t]))), main = "")
+lines(y1, col = clr[1], lwd = 3)
+lines(y2, col = clr[2], lwd = 3)
+lines(y3, col = clr[3], lwd = 3)
+```
+
+&lt;img src="presentation_files/figure-html/multi_obs-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+class: frimg
+background-image: url(figs/bulltrout_sampling.png)
+background-position: 50% 60%
+background-size: 95%
+
+# Varying sampling methods
+
+
+---
+
+# Varying sampling methods
+
+.blue[ 
+## Different methods have different observation errors
+
+## Ex: Weir counts are more precise than snorkel surveys
+]
+
+
+---
+
+class: center, middle, inverse
+
+# Multiple surveys of each type help inform the variance estimates 
+
+
+---
+
+# Observation model for multiple time series
+
+## .center.blue[ Example of 5 popns across 2 core areas (A &amp; B) ]
+
+`$$\begin{gathered}
+    y_{1,t} = x_{A,t} + v_{1,t} \\
+    y_{2,t} = x_{A,t} + v_{2,t} \\
+    \hline 
+    y_{3,t} = x_{B,t} + v_{3,t} \\
+    y_{4,t} = x_{B,t} + v_{4,t} \\
+    y_{5,t} = x_{B,t} + v_{5,t}
+  \end{gathered}$$`
+
+
+---
+
+# Observation model for multiple time series
+
+## .center.blue[ Example of 5 popns, 2 core areas via 2 methods (i &amp; j)]
+
+`$$\begin{gathered}
+    v_{1,t} \sim \text{N}(0, r_i) \\
+    v_{2,t} \sim \text{N}(0, r_j) \\
+    \hline 
+    v_{3,t} \sim \text{N}(0, r_j) \\
+    v_{4,t} \sim \text{N}(0, r_i) \\
+    v_{5,t} \sim \text{N}(0, r_j)
+  \end{gathered}$$`
+
+
+---
+
+# Fitting the models
+
+## .blue[ Used the 30-year time period from 1991-2020 ]
+
+## .blue[ Time series needed &amp;ge;10 years of non-missing data ]
+
+
+---
+
+# Fitting the models
+
+## .blue[ Used the 30-year time period from 1991-2020 ]
+
+## .blue[ Time series needed &amp;ge;10 years of non-missing data ]
+
+## .green[ All models fit in **R** using the `{MARSS}` package ]
+
+## .green[ Estimated 90% confidence intervals on bias terms ]
+
+
+---
+
+# Bias in trends
+
+## .blue[ 37/62 core areas had a negative trend ]
+
+## .center.blue[ but only 3/62 were "significantly" negative ]
+
+
+---
+
+class: frimg, center
+background-image: url(figs/kootenai.png)
+background-position: 40% 65%
+background-size: 60%
+
+# Example of a significant decline
+
+
+---
+
+class: frimg, center
+background-image: url(figs/stillaguamish.png)
+background-position: 40% 65%
+background-size: 60%
+
+# Example of a significant decline
+
+
+---
+
+# Bias in trends
+
+## .blue[ 37/62 core areas had a negative trend ]
+
+## .center.blue[ but only 3/62 were "significantly" negative ]
+
+&lt;br&gt;
+
+## .green[ 25/62 core areas had a positive trend ]
+
+## .center.green[ but only 5/62 were "significantly" positive ]
+
+
+---
+
+class: frimg, center
+background-image: url(figs/lower_deschutes.png)
+background-position: 40% 65%
+background-size: 60%
+
+# Example of a significant increase
+
+
+---
+
+class: frimg, center
+background-image: url(figs/upper_whitefish.png)
+background-position: 40% 65%
+background-size: 60%
+
+# Example of a significant increase
+
+
+---
+
+class: frimg, center
+background-image: url(figs/skokomish.png)
+background-position: 40% 65%
+background-size: 60%
+
+# Example of no systematic trend
+
+
+---
+
+class: inverse, center, middle
+
+# Data quality influences our ability to estimate biases
+
+---
+
+class: frimg, center
+background-image: url(figs/big_salmon.png)
+background-position: 40% 65%
+background-size: 60%
+
+# Example of a data-poor core area
+
+
+---
+
+class: frimg, center
+background-image: url(figs/flathead.png)
+background-position: 40% 65%
+background-size: 60%
+
+# Example of a data-rich core area
+
+
+---
+
+# Big picture
+
+.blue[
+## Status of bull trout in the Pacific Northwest is mixed 
+]
+
+.footnote.purple[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#844870;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; scheuerl@uw.edu]
+
+.citation.blue[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#488fdf;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"&gt;&lt;/path&gt;&lt;/svg&gt; @mark_scheuerell]
+
+
+---
+
+# Big picture
+
+.blue[
+## Status of bull trout in the Pacific Northwest is mixed 
+
+## Data quality affects our ability to assess trends
+]
+
+.footnote.purple[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#844870;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; scheuerl@uw.edu]
+
+.citation.blue[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#488fdf;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"&gt;&lt;/path&gt;&lt;/svg&gt; @mark_scheuerell]
+
+
+---
+
+# Big picture
+
+.blue[
+## Status of bull trout in the Pacific Northwest is mixed 
+
+## Data quality affects our ability to assess trends
+
+## State-space models can help 
+]
+
+.footnote.purple[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#844870;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; scheuerl@uw.edu]
+
+.citation.blue[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#488fdf;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"&gt;&lt;/path&gt;&lt;/svg&gt; @mark_scheuerell]
+
+
+---
+
+## Open science
+
+### https://github.com/mdscheuerell/bulltrout
+
+## Image credits
+
+.blue[
+#### Chimps: *Lantern Press*  
+
+#### Carnival: *Frank Kovalchek*   
+
+#### Robin Hood: *John Escott*  
+
+#### Bull trout sampling: *Brett Bowersox*  
+]
+
+.footnote.purple[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#844870;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; scheuerl@uw.edu]
+
+.citation.blue[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#488fdf;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"&gt;&lt;/path&gt;&lt;/svg&gt; @mark_scheuerell]
+
+
+---
+
 ## Typography
 
 Text can be **bold**, _italic_, ~~strikethrough~~, or `inline code`.
@@ -358,8 +1178,8 @@ exclude: false
 DT::datatable(head(mtcars), fillContainer = FALSE, options = list(pageLength = 4))
 ```
 
-<div class="datatables html-widget html-fill-item" id="htmlwidget-4b2105141808cae02f87" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-4b2105141808cae02f87">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant"],[21,21,22.8,21.4,18.7,18.1],[6,6,4,6,8,6],[160,160,108,258,360,225],[110,110,93,110,175,105],[3.9,3.9,3.85,3.08,3.15,2.76],[2.62,2.875,2.32,3.215,3.44,3.46],[16.46,17.02,18.61,19.44,17.02,20.22],[0,0,1,1,0,1],[1,1,1,0,0,0],[4,4,4,3,3,3],[4,4,1,1,2,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"mpg","targets":1},{"name":"cyl","targets":2},{"name":"disp","targets":3},{"name":"hp","targets":4},{"name":"drat","targets":5},{"name":"wt","targets":6},{"name":"qsec","targets":7},{"name":"vs","targets":8},{"name":"am","targets":9},{"name":"gear","targets":10},{"name":"carb","targets":11}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-1f0ba2c344ebfd80c411" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-1f0ba2c344ebfd80c411">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant"],[21,21,22.8,21.4,18.7,18.1],[6,6,4,6,8,6],[160,160,108,258,360,225],[110,110,93,110,175,105],[3.9,3.9,3.85,3.08,3.15,2.76],[2.62,2.875,2.32,3.215,3.44,3.46],[16.46,17.02,18.61,19.44,17.02,20.22],[0,0,1,1,0,1],[1,1,1,0,0,0],[4,4,4,3,3,3],[4,4,1,1,2,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"mpg","targets":1},{"name":"cyl","targets":2},{"name":"disp","targets":3},{"name":"hp","targets":4},{"name":"drat","targets":5},{"name":"wt","targets":6},{"name":"qsec","targets":7},{"name":"vs","targets":8},{"name":"am","targets":9},{"name":"gear","targets":10},{"name":"carb","targets":11}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 layout: true
@@ -492,17 +1312,8 @@ layout: false
 &lt;dd&gt;Green&lt;/dd&gt;
 &lt;/dl&gt;
 
----
-class: center, middle
 
-# Thanks!
 
-Slides created via the R packages:
-
-[**xaringan**](https://github.com/yihui/xaringan)&lt;br&gt;
-[gadenbuie/xaringanthemer](https://github.com/gadenbuie/xaringanthemer)
-
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
