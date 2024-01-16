@@ -11,17 +11,17 @@ output:
     css: xaringan-themer.css
     # css: ["xaringan-themer.css", "my-theme.css"]
     nature:
-      slideNumberFormat: "%current%"
+      # slideNumberFormat: "%current%"
       highlightStyle: github
       highlightLines: true
       ratio: 16:9
-      countIncrementalSlides: true
+      # countIncrementalSlides: false
 ---
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(
-  fig.width=9, fig.height=3.5, fig.retina=3,
+  fig.width=8, fig.height=4, fig.retina=3,
   out.width = "100%",
   cache = FALSE,
   echo = TRUE,
@@ -48,7 +48,8 @@ style_duo(
     orange = "#FF961C",
     green = "#339933",
     white = "#FFFFFF",
-    blue = "#488fdf"
+    blue = "#488fdf",
+    gray = "#808080"
   ),
   header_font_google = google_font("Roboto Condensed", "400", "400i", "700"),
   text_font_google = google_font("Cabin", "400", "400i", "700"),
@@ -161,7 +162,7 @@ background-size: 90%
 
 # The data are gappy
 
-```{r data_gappy, dpi=300, fig.height=5, fig.width=8, out.height="100%", out.width="100%", fig.align='center', echo=FALSE, warning=FALSE}
+```{r data_gappy, dpi=300, out.height="80%", out.width="100%", fig.align='center', echo=FALSE, warning=FALSE}
 nn <- 20
 tt <- rpois(nn, 10)
 na <- sample(tt, 5)
@@ -172,8 +173,8 @@ plot(seq(nn), tt, type = "o",
      col = "dodgerblue",
      las = 1, ylim = c(0, max(tt, na.rm = TRUE)),
      xlab = "Time", ylab = "Count",
-     cex.lab = 1.7,
-     cex.axis = 1.5)
+     cex.lab = 1.5,
+     cex.axis = 1.3)
 ```
 
 
@@ -334,8 +335,8 @@ background-size: cover
 
 ## .purple[Data] = .blue[Truth] &#177; .red[Errors]
 
-```{r obs_diag, dpi=300, fig.height=4, fig.width=8, out.height="100%", out.width="100%", fig.align='center', echo=FALSE, warning=FALSE}
-par(mai=c(0.8,0.8,0,0), omi=rep(0,4))
+```{r obs_diag, dpi=300, out.height="80%", out.width="80%", fig.align='center', echo=FALSE, warning=FALSE}
+par(mai=c(1,1,0,0), omi=rep(0,4))
 ## arrow locs
 x0t <- seq(ss, by=2*ss, len=3)
 x1t <- x0t + ss
@@ -393,8 +394,8 @@ class: inverse, center, middle
 
 ## 2. .gray[Missing data] are easily accommodated
 
-```{r obs_NA, dpi=300, fig.height=4, fig.width=8, out.height="90%", out.width="90%", fig.align='center', echo=FALSE, warning=FALSE}
-par(mai=c(0.8,0.8,0,0), omi=rep(0,4))
+```{r obs_NA, dpi=300, out.height="80%", out.width="80%", fig.align='center', echo=FALSE, warning=FALSE}
+par(mai=c(1,1,0,0), omi=rep(0,4))
 ## arrow locs
 x0t <- seq(ss, by=2*ss, len=3)
 x1t <- x0t + ss
@@ -447,7 +448,7 @@ background-size: 70%
 class: frimg
 background-image: url(figs/robin.jpg)
 background-position: 50% 80%
-background-size: 40%
+background-size: 30%
 
 # Advantages
 
@@ -466,18 +467,21 @@ class: inverse, center, middle
 class: frimg
 background-image: url(figs/bull_trout_art.png)
 background-position: 50% 90%
-background-size: 60%
+background-size: 40%
 
 # Bull trout *Salvelinus confluentus*
 
-.green[
-### Native to the Pacific Northwest & Canada
+### .green[
+Native to the Pacific Northwest & Canada
+]
 
-### 4 different life histories (resident, riverine, lacustrine, anadromous)
+### .green[4 different life histories (resident, riverine, lacustrine, anadromous)
+]
 
-### Mature at 4-7 years of age
+### .green[ Mature at 4-7 years of age
+]
 
-### Listed as threatened under the ESA in 1999
+### .green[ Listed as threatened under the ESA in 1999
 ]
 
 
