@@ -8,8 +8,7 @@ author:
 # date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
-    css: xaringan-themer.css
-    # css: ["xaringan-themer.css", "my-theme.css"]
+    css: ["xaringan-themer.css", "my-theme.css"]
     nature:
       slideNumberFormat: ""
       highlightStyle: github
@@ -134,7 +133,7 @@ class: inverse, center, middle
 
 class: frimg
 background-image: url(figs/no_evil.jpg)
-background-size: 90%
+background-size: 80%
 
 
 ---
@@ -470,10 +469,10 @@ Native to the Pacific Northwest & Canada
 
 ---
 
-class: frimg, inverse
+class: frimg, inverse-black
 background-image: url(figs/bull_trout_range_map.jpg)
 background-position: 50% 50%
-background-size: cover
+background-size: 75%
 
 
 ---
