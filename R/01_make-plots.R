@@ -21,7 +21,7 @@ returns <- data_raw %>%
 ## annual & cumulative spending
 spending <- data_raw %>%
   select(year, spending) %>%
-  mutate(cum_spending = cumsum(spending))
+  mutate(cum_spending = cumsum(spending) / 1000)
 
 ## hatchery releases
 releases <- data_raw %>%
@@ -60,17 +60,31 @@ dev.off()
 
 ## annual & cumulative spending
 
+## annual
 png(file = here::here("presentation", "figs", "annual_spending.png"),
     width = 8, height = 5, units = "in", res = 300)
 
 par(mai = c(0.9, 0.9, 0.1, 0.1),
     omi = c(0.1, 0.1, 0.1, 0.1))
-matplot(spending[,"year"], spending[,-1],
+plot(spending[,"year"], spending[,"spending"],
         type = "o", lty = "solid", pch = 16, lwd = 2,
-        col = c("#a6611a", "#2b83ba", "#ca0020", "#5e3c99"),
-        yaxt = "n",
-        xlab = "Year", ylab = "Returns (1000s)",
+        col = "#008837",
+        xlab = "Year", ylab = "Spending (millions)",
         cex.axis = 1.2, cex.lab = 1.5)
+
+dev.off()
+
+## cumulative
+png(file = here::here("presentation", "figs", "cum_spending.png"),
+    width = 8, height = 5, units = "in", res = 300)
+
+par(mai = c(0.9, 0.9, 0.1, 0.1),
+    omi = c(0.1, 0.1, 0.1, 0.1))
+plot(spending[,"year"], spending[,"cum_spending"],
+     type = "o", lty = "solid", pch = 16, lwd = 2,
+     col = "#008837",
+     xlab = "Year", ylab = "Cumulative spending (billions)",
+     cex.axis = 1.2, cex.lab = 1.5)
 
 dev.off()
 
