@@ -11,7 +11,7 @@ output:
     css: xaringan-themer.css
     # css: ["xaringan-themer.css", "my-theme.css"]
     nature:
-      # slideNumberFormat: "%current%"
+      slideNumberFormat: ""
       highlightStyle: github
       highlightLines: true
       ratio: 16:9
@@ -24,7 +24,7 @@ knitr::opts_chunk$set(
   fig.width=8, fig.height=4, fig.retina=3,
   out.width = "100%",
   cache = FALSE,
-  echo = TRUE,
+  echo = FALSE,
   message = FALSE, 
   warning = FALSE,
   hiline = TRUE
@@ -55,6 +55,7 @@ style_duo(
   text_font_google = google_font("Cabin", "400", "400i", "700"),
 )
 ```
+
 
 
 # Collaborators
@@ -90,58 +91,36 @@ style_duo(
 
 ---
 
-class: middle
+# ESA status reviews
 
-# Endangered Species Act of 1973
+### .blue[Required every 5 years to ensure appropriate protections]
 
-> ## The purpose of the ESA is to protect and recover imperiled species and the ecosystems upon which they depend.
+### .blue[Considerations include]
 
+* ### .gray[population trends, distribution, demographics & genetics]
 
----
+* ### .gray[habitat conditions]
 
-class: inverse, center, middle
+* ### .gray[past conservation measures]
 
-# There are over 1500 species listed under the Endangered Species Act
+* ### .gray[status & trends of threats]
 
 
 ---
 
 # ESA status reviews
 
-.blue[
-### Required every 5 years to ensure appropriate protections
+### .blue[Required every 5 years to ensure appropriate protections]
 
-### Considerations include
-]
-
-* ### population trends, distribution, demographics & genetics
-
-* ### habitat conditions
-
-* ### past conservation measures
-
-* ### status & trends of threats
-
-
----
-
-# ESA status reviews
-
-.gray[
-### Required every 5 years to ensure appropriate protections
-
-### Considerations include
-]
+### .blue[Considerations include]
 
 * ### .green[population trends].gray[, distribution, demographics & genetics]
 
-.gray[
-* ### habitat conditions
+* ### .gray[habitat conditions]
 
-* ### past conservation measures
+* ### .gray[past conservation measures]
 
-* ### status & trends of threats
-]
+* ### .gray[status & trends of threats]
 
 
 ---
@@ -160,20 +139,22 @@ background-size: 90%
 
 ---
 
+class: center
+
 # The data are gappy
 
-```{r data_gappy, dpi=300, out.height="80%", out.width="100%", fig.align='center', echo=FALSE, warning=FALSE}
+```{r data_gappy, dpi=300, out.height = "90%", out.width = "90%", fig.align = 'center', echo = FALSE, warning=FALSE}
 nn <- 20
 tt <- rpois(nn, 10)
 na <- sample(tt, 5)
 tt[na] <- NA
-par(mai = c(1, 1, 0.2, 0), omi = rep(0, 4))
+par(mai = c(1, 1, 0, 1), omi = rep(0, 4))
 plot(seq(nn), tt, type = "o", 
      pch = 16, lwd = 3, cex = 1.5,
      col = "dodgerblue",
      las = 1, ylim = c(0, max(tt, na.rm = TRUE)),
      xlab = "Time", ylab = "Count",
-     cex.lab = 1.5,
+     cex.lab = 1.6,
      cex.axis = 1.3)
 ```
 
@@ -184,16 +165,14 @@ plot(seq(nn), tt, type = "o",
 
 <br>
 
-.center[
-.green[
-## non-exhaustive surveys
+## .center.green[
+non-exhaustive surveys
 ]
-.blue[
-## undetected individuals
+## .center.blue[
+undetected individuals
 ]
-.orange[
-## misidentified individuals
-]
+## .center.orange[
+misidentified individuals
 ]
 
 
@@ -203,28 +182,28 @@ plot(seq(nn), tt, type = "o",
 
 <br>
 
-.center[
-.green[
-## direct vs remotely sensed
+
+## .center.green[
+direct vs remotely sensed
 ]
-.blue[
-## design-based vs opportunistic
+## .center.blue[
+design-based vs opportunistic
 ]
-.orange[
-## scientific surveys vs recreational sampling
+## .center.orange[
+scientific surveys vs recreational sampling
 ]
-]
+
 
 
 ---
 
 class: middle
 
-.blue[
-> # How can we use this information to inform decisions?
+> # .blue[
+How can we use this information to inform decisions?
 ]
-.green[
-> # For trends over time, one option is a state-space model
+> # .green[
+For trends over time, one option is a state-space model
 ]
 
 
@@ -234,7 +213,7 @@ class: middle
 
 ## Describes the .blue[true state of nature] over time
 
-```{r state_diag, dpi=300, fig.height=4, fig.width=8, out.height="100%", out.width="100%", fig.align='center', echo=FALSE, warning=FALSE}
+```{r state_diag, dpi=300, out.height="80%", out.width="80%", fig.align='center', echo=FALSE, warning=FALSE}
 par(mai=c(0.8,0.8,0,0), omi=rep(0,4))
 ## boundaries
 ss <- 5
@@ -270,30 +249,30 @@ text("Time", x=cc/2, y=-ss/2+ss*2, xpd=NA, pos=1, cex=2)
 
 <br>
 
-.center[
-.green[
-## Animal location
+
+## .center.green[
+Animal location
 ]
-.blue[
-## Species density
+## .center.blue[
+Species density
 ]
-.orange[
-## Age structure
+## .center.orange[
+Age structure
 ]
-.purple[
-## Reproductive status
+## .center.purple[
+Reproductive status
 ]
-]
+
 
 
 ---
 
-class: frimg, center, bottom, black-back
+class: frimg, center, bottom, inverse
 background-image: url(figs/venice_carnival.jpg)
 background-size: 100%
 
 ## .white[Revealing the true state requires observations]
-### .black[-]
+
 
 ---
 
@@ -372,7 +351,7 @@ text("Time", x=cc/2, y=-ss/2, xpd=NA, pos=1, cex=2)
 
 class: inverse, center, middle
 
-# OK, but why bother?
+# Why bother?
 
 ---
 
@@ -380,12 +359,16 @@ class: inverse, center, middle
 
 ## 1. Can combine many different .purple[data types]
 
-.center.purple[
-### Changes in observers or sensors
+## .center.purple[
+Changes in observers or sensors
+]
 
-### Varying survey locations & effort
+## .center.purple[
+Varying survey locations & effort
+]
 
-### Direct & remote sampling  
+## .center.purple[
+Direct & remote sampling  
 ]
 
 ---
@@ -436,7 +419,7 @@ text("Time or space", x=cc/2, y=-ss/2, xpd=NA, pos=1, cex=2)
 
 class: frimg
 background-image: url(figs/Jonsen2016.png)
-background-position: 50% 60%
+background-position: 50% 70%
 background-size: 70%
 
 # Advantages
@@ -977,6 +960,43 @@ background-size: 60%
 
 
 ---
+
+class: frimg, center
+background-image: url(figs/adult_returns.png)
+background-position: 40% 80%
+background-size: 75%
+
+# Adult returns to Bonneville
+
+---
+
+class: frimg, center
+background-image: url(figs/releases.png)
+background-position: 40% 80%
+background-size: 75%
+
+# Hatchery releases
+
+---
+
+class: frimg, center
+background-image: url(figs/spending.png)
+background-position: 40% 80%
+background-size: 75%
+
+# Annual spending
+
+---
+
+class: frimg, center
+background-image: url(figs/cum_spending.png)
+background-position: 40% 80%
+background-size: 75%
+
+# Cumulative spending
+
+---
+
 
 ## Typography
 

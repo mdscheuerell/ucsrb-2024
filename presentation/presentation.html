@@ -38,6 +38,7 @@ class: center, middle, inverse, title-slide
 
 
 
+
 # Collaborators
 
 .pull-left[
@@ -71,58 +72,36 @@ class: center, middle, inverse, title-slide
 
 ---
 
-class: middle
+# ESA status reviews
 
-# Endangered Species Act of 1973
+### .blue[Required every 5 years to ensure appropriate protections]
 
-&gt; ## The purpose of the ESA is to protect and recover imperiled species and the ecosystems upon which they depend.
+### .blue[Considerations include]
 
+* ### .gray[population trends, distribution, demographics &amp; genetics]
 
----
+* ### .gray[habitat conditions]
 
-class: inverse, center, middle
+* ### .gray[past conservation measures]
 
-# There are over 1500 species listed under the Endangered Species Act
+* ### .gray[status &amp; trends of threats]
 
 
 ---
 
 # ESA status reviews
 
-.blue[
-### Required every 5 years to ensure appropriate protections
+### .blue[Required every 5 years to ensure appropriate protections]
 
-### Considerations include
-]
-
-* ### population trends, distribution, demographics &amp; genetics
-
-* ### habitat conditions
-
-* ### past conservation measures
-
-* ### status &amp; trends of threats
-
-
----
-
-# ESA status reviews
-
-.gray[
-### Required every 5 years to ensure appropriate protections
-
-### Considerations include
-]
+### .blue[Considerations include]
 
 * ### .green[population trends].gray[, distribution, demographics &amp; genetics]
 
-.gray[
-* ### habitat conditions
+* ### .gray[habitat conditions]
 
-* ### past conservation measures
+* ### .gray[past conservation measures]
 
-* ### status &amp; trends of threats
-]
+* ### .gray[status &amp; trends of threats]
 
 
 ---
@@ -141,9 +120,11 @@ background-size: 90%
 
 ---
 
+class: center
+
 # The data are gappy
 
-&lt;img src="presentation_files/figure-html/data_gappy-1.png" width="100%" height="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentation_files/figure-html/data_gappy-1.png" width="90%" height="90%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -152,16 +133,14 @@ background-size: 90%
 
 &lt;br&gt;
 
-.center[
-.green[
-## non-exhaustive surveys
+## .center.green[
+non-exhaustive surveys
 ]
-.blue[
-## undetected individuals
+## .center.blue[
+undetected individuals
 ]
-.orange[
-## misidentified individuals
-]
+## .center.orange[
+misidentified individuals
 ]
 
 
@@ -171,28 +150,28 @@ background-size: 90%
 
 &lt;br&gt;
 
-.center[
-.green[
-## direct vs remotely sensed
+
+## .center.green[
+direct vs remotely sensed
 ]
-.blue[
-## design-based vs opportunistic
+## .center.blue[
+design-based vs opportunistic
 ]
-.orange[
-## scientific surveys vs recreational sampling
+## .center.orange[
+scientific surveys vs recreational sampling
 ]
-]
+
 
 
 ---
 
 class: middle
 
-.blue[
-&gt; # How can we use this information to inform decisions?
+&gt; # .blue[
+How can we use this information to inform decisions?
 ]
-.green[
-&gt; # For trends over time, one option is a state-space model
+&gt; # .green[
+For trends over time, one option is a state-space model
 ]
 
 
@@ -202,7 +181,7 @@ class: middle
 
 ## Describes the .blue[true state of nature] over time
 
-&lt;img src="presentation_files/figure-html/state_diag-1.png" width="100%" height="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentation_files/figure-html/state_diag-1.png" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -210,30 +189,30 @@ class: middle
 
 &lt;br&gt;
 
-.center[
-.green[
-## Animal location
+
+## .center.green[
+Animal location
 ]
-.blue[
-## Species density
+## .center.blue[
+Species density
 ]
-.orange[
-## Age structure
+## .center.orange[
+Age structure
 ]
-.purple[
-## Reproductive status
+## .center.purple[
+Reproductive status
 ]
-]
+
 
 
 ---
 
-class: frimg, center, bottom, black-back
+class: frimg, center, bottom, inverse
 background-image: url(figs/venice_carnival.jpg)
 background-size: 100%
 
 ## .white[Revealing the true state requires observations]
-### .black[-]
+
 
 ---
 
@@ -281,7 +260,7 @@ background-size: cover
 
 class: inverse, center, middle
 
-# OK, but why bother?
+# Why bother?
 
 ---
 
@@ -289,12 +268,16 @@ class: inverse, center, middle
 
 ## 1. Can combine many different .purple[data types]
 
-.center.purple[
-### Changes in observers or sensors
+## .center.purple[
+Changes in observers or sensors
+]
 
-### Varying survey locations &amp; effort
+## .center.purple[
+Varying survey locations &amp; effort
+]
 
-### Direct &amp; remote sampling  
+## .center.purple[
+Direct &amp; remote sampling  
 ]
 
 ---
@@ -309,7 +292,7 @@ class: inverse, center, middle
 
 class: frimg
 background-image: url(figs/Jonsen2016.png)
-background-position: 50% 60%
+background-position: 50% 70%
 background-size: 70%
 
 # Advantages
@@ -438,46 +421,6 @@ class: inverse, center, middle
 
 `$$x_t = x_{t-1} + \text{bias} \pm \text{error}$$`
 
-
-```r
-x1 &lt;- cumsum(rnorm(30, 0.1, 0.3)) + 10
-
-x2 &lt;- cumsum(rnorm(30, -0.1, 0.3)) + 10
-
-clr1 &lt;- c("#c6dbef",
-          "#9ecae1",
-          "#6baed6",
-          "#4292c6",
-          "#2171b5",
-          "#08519c",
-          "#08306b")
-
-clr2 &lt;- c("#fcbba1",
-          "#fc9272",
-          "#fb6a4a",
-          "#ef3b2c",
-          "#cb181d",
-          "#a50f15",
-          "#67000d")
-
-par(mfrow = c(1,2), mai = c(1, 1, 0.75, 0.3))
-plot.ts(x1, las = 1, col = "dodgerblue", lwd = 2, ylim = c(8, 16),
-        ylab = expression(italic(x[t])), main = "")
-mtext("Positive bias", side = 3, line = 1, cex = 2)
-for(i in 1:6) {
-  lines(cumsum(rnorm(30, 0.1, 0.3)) + 10,
-        col = clr1[i], lwd = 2)
-}
-
-plot.ts(x2, las = 1, col = "indianred", lwd = 2,  ylim = c(4, 12),
-        ylab = expression(italic(x[t])), main = "")
-mtext("Negative bias", side = 3, line = 1, cex = 2)
-for(i in 1:6) {
-  lines(cumsum(rnorm(30, -0.1, 0.3)) + 10,
-        col = clr2[i], lwd = 2)
-}
-```
-
 &lt;img src="presentation_files/figure-html/ex_biased_rw-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 
 
@@ -500,24 +443,6 @@ class: inverse, center, middle
 ---
 
 # Ex: biased random walk with obs error
-
-
-```r
-y1 &lt;- x1 + rnorm(30, 0, 0.4)
-
-y2 &lt;- x2 + rnorm(30, 0, 0.4)
-
-par(mfrow = c(1,2), mai = c(1, 1, 0.75, 0))
-plot.ts(x1, las = 1, col = "gray", lwd = 3, ylim = c(9, 15), # range(x1, y1),
-        ylab = expression(italic(x[t])), main = "")
-mtext("Positive bias", side = 3, line = 1, cex = 2)
-lines(y1, col = "dodgerblue", lwd = 3)
-
-plot.ts(x2, las = 1, col = "gray", lwd = 3, ylim = c(6, 11), # range(x2, y2),
-        ylab = expression(italic(x[t])), main = "")
-mtext("Negative bias", side = 3, line = 1, cex = 2)
-lines(y2, col = "indianred", lwd = 3)
-```
 
 &lt;img src="presentation_files/figure-html/ex_biased_rw_y-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 
@@ -587,23 +512,6 @@ class: center
 ---
 
 # Example: 3 observations of a common state
-
-
-```r
-y2 &lt;- x1 + rnorm(30, 0, 0.4)
-y3 &lt;- x1 + rnorm(30, 0, 0.5)
-
-## set colormap
-clr &lt;- viridisLite::mako(4, begin = 0.4, end = 0.9)
-
-par(mai = c(1, 1, 0.1, 0.1))
-
-plot.ts(x1, las = 1, col = "gray", lwd = 3, ylim = range(x1, y1, y2, y3),
-        ylab = expression(paste(italic(x[t]), "  or  ", italic(y[t]))), main = "")
-lines(y1, col = clr[1], lwd = 3)
-lines(y2, col = clr[2], lwd = 3)
-lines(y3, col = clr[3], lwd = 3)
-```
 
 &lt;img src="presentation_files/figure-html/multi_obs-1.png" width="100%" style="display: block; margin: auto;" /&gt;
 
@@ -860,6 +768,43 @@ background-size: 60%
 
 ---
 
+class: frimg, center
+background-image: url(figs/adult_returns.png)
+background-position: 40% 80%
+background-size: 75%
+
+# Adult returns to Bonneville
+
+---
+
+class: frimg, center
+background-image: url(figs/releases.png)
+background-position: 40% 80%
+background-size: 75%
+
+# Hatchery releases
+
+---
+
+class: frimg, center
+background-image: url(figs/spending.png)
+background-position: 40% 80%
+background-size: 75%
+
+# Annual spending
+
+---
+
+class: frimg, center
+background-image: url(figs/cum_spending.png)
+background-position: 40% 80%
+background-size: 75%
+
+# Cumulative spending
+
+---
+
+
 ## Typography
 
 Text can be **bold**, _italic_, ~~strikethrough~~, or `inline code`.
@@ -972,26 +917,13 @@ layout: true
 #### R Code
 
 
-```r
-ggplot(gapminder) +
-  aes(x = gdpPercap, y = lifeExp, size = pop, color = country) +
-  geom_point() +
-  facet_wrap(~year)
-```
 
 ### More R Code
 
 
-```r
-dplyr::starwars %&gt;% dplyr::slice_sample(n = 4)
-```
 
 ---
 
-
-```r
-cli::cli_alert_success("It worked!")
-```
 
 ```
 ## ✔ It worked!
@@ -1000,10 +932,6 @@ cli::cli_alert_success("It worked!")
 --
 
 
-```r
-message("Just a friendly message")
-```
-
 ```
 ## Just a friendly message
 ```
@@ -1011,20 +939,12 @@ message("Just a friendly message")
 --
 
 
-```r
-warning("This could be bad...")
-```
-
 ```
 ## Warning: This could be bad...
 ```
 
 --
 
-
-```r
-stop("I hope you're sitting down for this")
-```
 
 ```
 ## Error in eval(expr, envir, enclos): I hope you're sitting down for this
@@ -1039,10 +959,6 @@ layout: true
 ---
 exclude: false
 
-
-```r
-tibble::as_tibble(mtcars)
-```
 
 ```
 ## # A tibble: 32 × 11
@@ -1062,11 +978,6 @@ tibble::as_tibble(mtcars)
 ```
 
 ---
-
-
-```r
-knitr::kable(head(mtcars), format = 'html')
-```
 
 &lt;table&gt;
  &lt;thead&gt;
@@ -1176,13 +1087,8 @@ knitr::kable(head(mtcars), format = 'html')
 ---
 exclude: false
 
-
-```r
-DT::datatable(head(mtcars), fillContainer = FALSE, options = list(pageLength = 4))
-```
-
-<div class="datatables html-widget html-fill-item" id="htmlwidget-dd11e418e7801f3cc121" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-dd11e418e7801f3cc121">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant"],[21,21,22.8,21.4,18.7,18.1],[6,6,4,6,8,6],[160,160,108,258,360,225],[110,110,93,110,175,105],[3.9,3.9,3.85,3.08,3.15,2.76],[2.62,2.875,2.32,3.215,3.44,3.46],[16.46,17.02,18.61,19.44,17.02,20.22],[0,0,1,1,0,1],[1,1,1,0,0,0],[4,4,4,3,3,3],[4,4,1,1,2,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"mpg","targets":1},{"name":"cyl","targets":2},{"name":"disp","targets":3},{"name":"hp","targets":4},{"name":"drat","targets":5},{"name":"wt","targets":6},{"name":"qsec","targets":7},{"name":"vs","targets":8},{"name":"am","targets":9},{"name":"gear","targets":10},{"name":"carb","targets":11}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-afce682d640d457ab3b2" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-afce682d640d457ab3b2">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant"],[21,21,22.8,21.4,18.7,18.1],[6,6,4,6,8,6],[160,160,108,258,360,225],[110,110,93,110,175,105],[3.9,3.9,3.85,3.08,3.15,2.76],[2.62,2.875,2.32,3.215,3.44,3.46],[16.46,17.02,18.61,19.44,17.02,20.22],[0,0,1,1,0,1],[1,1,1,0,0,0],[4,4,4,3,3,3],[4,4,1,1,2,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"mpg","targets":1},{"name":"cyl","targets":2},{"name":"disp","targets":3},{"name":"hp","targets":4},{"name":"drat","targets":5},{"name":"wt","targets":6},{"name":"qsec","targets":7},{"name":"vs","targets":8},{"name":"am","targets":9},{"name":"gear","targets":10},{"name":"carb","targets":11}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 layout: true
@@ -1256,18 +1162,10 @@ layout: true
 ---
 
 
-```r
-# library(ggplot2)
-# (g &lt;- ggplot(mpg) + aes(hwy, cty, color = class) + geom_point())
-```
 
 ---
 
 
-```r
-# g + xaringanthemer::theme_xaringan(text_font_size = 16, title_font_size = 18) +
-#  ggtitle("A Plot About Cars")
-```
 
 .footnote[Requires `{showtext}`]
 
@@ -1321,6 +1219,7 @@ layout: false
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
+"slideNumberFormat": "",
 "highlightStyle": "github",
 "highlightLines": true,
 "ratio": "16:9"
