@@ -208,12 +208,13 @@ Reproductive status
 
 ---
 
-class: frimg, center, bottom, inverse
+class: frimg, center, bottom, inverse-black
 background-image: url(figs/venice_carnival.jpg)
 background-size: 100%
 
 ## .white[Revealing the true state requires observations]
 
+&lt;br&gt;
 
 ---
 
@@ -363,7 +364,7 @@ class: inverse, center, middle
 
 ### .blue[Exponential growth/decline in continuous time]
 
-`$$N(t) = N_0 ~ \underbrace{\exp(u)}_{\substack{\text{rate of} \\ \text{change}}} \underbrace{\exp(w t)}_{\substack{\text{stochastic} \\ \text{environment}}}$$`
+`$$\Large{N(t) = N_0 ~ \underbrace{\exp(u)}_{\substack{\text{rate of} \\ \text{change}}} \underbrace{\exp(w t)}_{\substack{\text{stochastic} \\ \text{environment}}}}$$`
 
 
 ---
@@ -372,7 +373,7 @@ class: inverse, center, middle
 
 ### .blue[In discrete time, with a time step of 1 year]
 
-`$$N_t = N_{t-1} \exp(u + w_t)$$`
+`$$\Large{N_t = N_{t-1} \exp(u + w_t)}$$`
 
 
 ---
@@ -381,15 +382,15 @@ class: inverse, center, middle
 
 ### .blue[In discrete time, with a time step of 1 year]
 
-`$$N_t = N_{t-1} \exp(u + w_t)$$`
+`$$\Large{N_t = N_{t-1} \exp(u + w_t)}$$`
 
 ### .blue[and on a log scale]
 
-`$$\log (N_t) = \log (N_{t-1}) + u + w_t$$`
+`$$\Large{\log (N_t) = \log (N_{t-1}) + u + w_t}$$`
 
 ### .blue[which we can rewrite as]
 
-`$$x_t = x_{t-1} + u + w_t$$`
+`$$\Large{x_t = x_{t-1} + u + w_t}$$`
 
 
 ---
@@ -398,7 +399,7 @@ class: inverse, center, middle
 
 ### .blue[If we assume that the errors are white noise]
 
-`$$w_t \sim \text{N}(0, q)$$`
+`$$\Large{w_t \sim \text{N}(0, q)}$$`
 
 
 ---
@@ -407,11 +408,11 @@ class: inverse, center, middle
 
 ### .blue[If we assume that the errors are white noise]
 
-`$$w_t \sim \text{N}(0, q)$$`
+`$$\Large{w_t \sim \text{N}(0, q)}$$`
 
 ### .blue[ then our model of populations dynamics]
 
-`$$x_t = x_{t-1} + u + w_t$$`
+`$$\Large{x_t = x_{t-1} + u + w_t}$$`
 
 ### .blue[is known as a] *biased random walk*
 
@@ -420,9 +421,7 @@ class: inverse, center, middle
 
 # Examples of biased random walks
 
-`$$x_t = x_{t-1} + \text{bias} \pm \text{error}$$`
-
-&lt;img src="presentation_files/figure-html/ex_biased_rw-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentation_files/figure-html/ex_biased_rw-1.png" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -438,14 +437,14 @@ class: inverse, center, middle
 
 ### .blue[ In log-space ]
 
-`$$\large{\underbrace{y_t}_{\substack{\text{observed} \\ \text{counts}}} = \underbrace{x_t}_{\substack{\text{true} \\ \text{counts}}} + \underbrace{v_t}_{\substack{\text{observer} \\ \text{error}}} ~~ \text{with} ~~ v_t \sim \text{N}(0, r)}$$`
+`$$\Large{\underbrace{y_t}_{\substack{\text{observed} \\ \text{counts}}} = \underbrace{x_t}_{\substack{\text{true} \\ \text{counts}}} + \underbrace{v_t}_{\substack{\text{observer} \\ \text{error}}} ~~ \text{with} ~~ v_t \sim \text{N}(0, r)}$$`
 
 
 ---
 
-# Ex: biased random walk with obs error
+# Biased random walks with obs error
 
-&lt;img src="presentation_files/figure-html/ex_biased_rw_y-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentation_files/figure-html/ex_biased_rw_y-1.png" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -478,12 +477,13 @@ class: center
 
 ## .center.blue[ Each _core area_ gets its own model ]
 
-`$$\begin{gathered}
+`$$\Large{\begin{gathered}
     x_{1,t} = x_{1,t-1} + u_1 + w_{1,t} \\
     x_{2,t} = x_{2,t-1} + u_2 + w_{2,t} \\
+    x_{3,t} = x_{3,t-1} + u_3 + w_{3,t} \\
     \vdots \\
-    x_{n,t} = x_{n,t-1} + u_n + w_{n,t} \\
-  \end{gathered}$$`
+    x_{62,t} = x_{62,t-1} + u_{62} + w_{62,t} \\
+  \end{gathered}}$$`
 
 
 ---
@@ -501,28 +501,28 @@ class: center
 
 ## .center.blue[ Example of 5 popns across 2 core areas (A &amp; B) ]
 
-`$$\begin{gathered}
+`$$\Large{\begin{gathered}
     y_{1,t} = x_{A,t} + v_{1,t} \\
     y_{2,t} = x_{A,t} + v_{2,t} \\
     \hline 
     y_{3,t} = x_{B,t} + v_{3,t} \\
     y_{4,t} = x_{B,t} + v_{4,t} \\
     y_{5,t} = x_{B,t} + v_{5,t}
-  \end{gathered}$$`
+  \end{gathered}}$$`
 
 ---
 
 # Example: 3 observations of a common state
 
-&lt;img src="presentation_files/figure-html/multi_obs-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;img src="presentation_files/figure-html/multi_obs-1.png" width="80%" height="80%" style="display: block; margin: auto;" /&gt;
 
 
 ---
 
 class: frimg
 background-image: url(figs/bulltrout_sampling.png)
-background-position: 50% 60%
-background-size: 95%
+background-position: 50% 70%
+background-size: 80%
 
 # Varying sampling methods
 
@@ -531,10 +531,12 @@ background-size: 95%
 
 # Varying sampling methods
 
-.blue[ 
-## Different methods have different observation errors
+## .blue[ 
+Different methods have different observation errors
+]
 
-## Ex: Weir counts are more precise than snorkel surveys
+## .blue[
+Ex: Weir counts are more precise than snorkel surveys
 ]
 
 
@@ -551,14 +553,14 @@ class: center, middle, inverse
 
 ## .center.blue[ Example of 5 popns across 2 core areas (A &amp; B) ]
 
-`$$\begin{gathered}
+`$$\Large{\begin{gathered}
     y_{1,t} = x_{A,t} + v_{1,t} \\
     y_{2,t} = x_{A,t} + v_{2,t} \\
     \hline 
     y_{3,t} = x_{B,t} + v_{3,t} \\
     y_{4,t} = x_{B,t} + v_{4,t} \\
     y_{5,t} = x_{B,t} + v_{5,t}
-  \end{gathered}$$`
+  \end{gathered}}$$`
 
 
 ---
@@ -567,14 +569,14 @@ class: center, middle, inverse
 
 ## .center.blue[ Example of 5 popns, 2 core areas via 2 methods (i &amp; j)]
 
-`$$\begin{gathered}
+`$$\Large{\begin{gathered}
     v_{1,t} \sim \text{N}(0, r_i) \\
     v_{2,t} \sim \text{N}(0, r_j) \\
     \hline 
     v_{3,t} \sim \text{N}(0, r_j) \\
     v_{4,t} \sim \text{N}(0, r_i) \\
     v_{5,t} \sim \text{N}(0, r_j)
-  \end{gathered}$$`
+  \end{gathered}}$$`
 
 
 ---
@@ -612,8 +614,8 @@ class: center, middle, inverse
 
 class: frimg, center
 background-image: url(figs/kootenai.png)
-background-position: 40% 65%
-background-size: 60%
+background-position: 40% 75%
+background-size: 65%
 
 # Example of a significant decline
 
@@ -622,8 +624,8 @@ background-size: 60%
 
 class: frimg, center
 background-image: url(figs/stillaguamish.png)
-background-position: 40% 65%
-background-size: 60%
+background-position: 40% 75%
+background-size: 65%
 
 # Example of a significant decline
 
@@ -647,8 +649,8 @@ background-size: 60%
 
 class: frimg, center
 background-image: url(figs/lower_deschutes.png)
-background-position: 40% 65%
-background-size: 60%
+background-position: 40% 75%
+background-size: 65%
 
 # Example of a significant increase
 
@@ -657,8 +659,8 @@ background-size: 60%
 
 class: frimg, center
 background-image: url(figs/upper_whitefish.png)
-background-position: 40% 65%
-background-size: 60%
+background-position: 40% 75%
+background-size: 65%
 
 # Example of a significant increase
 
@@ -667,8 +669,8 @@ background-size: 60%
 
 class: frimg, center
 background-image: url(figs/skokomish.png)
-background-position: 40% 65%
-background-size: 60%
+background-position: 40% 75%
+background-size: 65%
 
 # Example of no systematic trend
 
@@ -683,8 +685,8 @@ class: inverse, center, middle
 
 class: frimg, center
 background-image: url(figs/big_salmon.png)
-background-position: 40% 65%
-background-size: 60%
+background-position: 40% 75%
+background-size: 65%
 
 # Example of a data-poor core area
 
@@ -693,8 +695,8 @@ background-size: 60%
 
 class: frimg, center
 background-image: url(figs/flathead.png)
-background-position: 40% 65%
-background-size: 60%
+background-position: 40% 75%
+background-size: 65%
 
 # Example of a data-rich core area
 
@@ -703,13 +705,11 @@ background-size: 60%
 
 # Big picture
 
-.blue[
-## Status of bull trout in the Pacific Northwest is mixed 
+## .blue[
+Status of bull trout in the Pacific Northwest is mixed 
 ]
 
-.footnote.purple[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#844870;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; scheuerl@uw.edu]
-
-.citation.blue[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#488fdf;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"&gt;&lt;/path&gt;&lt;/svg&gt; @mark_scheuerell]
+### .citation.purple[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#844870;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; scheuerl@uw.edu]
 
 
 ---
@@ -1088,8 +1088,8 @@ exclude: false
 ---
 exclude: false
 
-<div class="datatables html-widget html-fill-item" id="htmlwidget-b6265f355dc22408e33d" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-b6265f355dc22408e33d">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant"],[21,21,22.8,21.4,18.7,18.1],[6,6,4,6,8,6],[160,160,108,258,360,225],[110,110,93,110,175,105],[3.9,3.9,3.85,3.08,3.15,2.76],[2.62,2.875,2.32,3.215,3.44,3.46],[16.46,17.02,18.61,19.44,17.02,20.22],[0,0,1,1,0,1],[1,1,1,0,0,0],[4,4,4,3,3,3],[4,4,1,1,2,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"mpg","targets":1},{"name":"cyl","targets":2},{"name":"disp","targets":3},{"name":"hp","targets":4},{"name":"drat","targets":5},{"name":"wt","targets":6},{"name":"qsec","targets":7},{"name":"vs","targets":8},{"name":"am","targets":9},{"name":"gear","targets":10},{"name":"carb","targets":11}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-903df29030d2808fc228" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-903df29030d2808fc228">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["Mazda RX4","Mazda RX4 Wag","Datsun 710","Hornet 4 Drive","Hornet Sportabout","Valiant"],[21,21,22.8,21.4,18.7,18.1],[6,6,4,6,8,6],[160,160,108,258,360,225],[110,110,93,110,175,105],[3.9,3.9,3.85,3.08,3.15,2.76],[2.62,2.875,2.32,3.215,3.44,3.46],[16.46,17.02,18.61,19.44,17.02,20.22],[0,0,1,1,0,1],[1,1,1,0,0,0],[4,4,4,3,3,3],[4,4,1,1,2,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>mpg<\/th>\n      <th>cyl<\/th>\n      <th>disp<\/th>\n      <th>hp<\/th>\n      <th>drat<\/th>\n      <th>wt<\/th>\n      <th>qsec<\/th>\n      <th>vs<\/th>\n      <th>am<\/th>\n      <th>gear<\/th>\n      <th>carb<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":4,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4,5,6,7,8,9,10,11]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"mpg","targets":1},{"name":"cyl","targets":2},{"name":"disp","targets":3},{"name":"hp","targets":4},{"name":"drat","targets":5},{"name":"wt","targets":6},{"name":"qsec","targets":7},{"name":"vs","targets":8},{"name":"am","targets":9},{"name":"gear","targets":10},{"name":"carb","targets":11}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[4,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 layout: true
