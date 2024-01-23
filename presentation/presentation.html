@@ -30,70 +30,45 @@ class: center, middle, inverse, title-slide
 
 
 
+# Two vignettes
 
-# Collaborators
+&gt; ## .blue[ Bull trout in the Pacific Northwest ]
 
-.pull-left[
-
-### .green[ Brett Bowersox (IDFG) ]
-
-### .green[ Dan Brewer (USFWS) ]
-
-### .blue[ Erin Britton-Kuttel (USFWS) ]
-
-### .blue[ Sean Finn (USFWS) ]
-
-### .green[ Stephanie Gunckel (ODFW) ]
-
-]
-
-.pull-right[
-
-### .blue[ Craig Hansen (USFWS) ]
-
-### .blue[ Rebecca Migala (USFWS) ]
-
-### .blue[ Dan Nolfi (USFWS) ]
-
-### .green[ Marie Winkowski (WDFW) ]
-
-### .blue[ Alan Yanahan (USFWS) ]
-
-]
+&gt; ## .green[ Restoration spending in the Columbia basin ]
 
 
 ---
 
 # ESA status reviews
 
-### .blue[Required every 5 years to ensure appropriate protections]
+## .blue[Required every 5 years to ensure appropriate protections]
 
-### .blue[Considerations include]
+## .blue[Considerations include]
 
-* ### .gray[population trends, distribution, demographics &amp; genetics]
+&gt; ### .gray[population trends, distribution, demographics &amp; genetics]
 
-* ### .gray[habitat conditions]
+&gt; ### .gray[habitat conditions]
 
-* ### .gray[past conservation measures]
+&gt; ### .gray[past conservation measures]
 
-* ### .gray[status &amp; trends of threats]
+&gt; ### .gray[status &amp; trends of threats]
 
 
 ---
 
 # ESA status reviews
 
-### .blue[Required every 5 years to ensure appropriate protections]
+## .blue[Required every 5 years to ensure appropriate protections]
 
-### .blue[Considerations include]
+## .blue[Considerations include]
 
-* ### .green[population trends].gray[, distribution, demographics &amp; genetics]
+&gt; ### .green[population trends].lightgray[, distribution, demographics &amp; genetics]
 
-* ### .gray[habitat conditions]
+&gt; ### .lightgray[habitat conditions]
 
-* ### .gray[past conservation measures]
+&gt; ### .lightgray[past conservation measures]
 
-* ### .gray[status &amp; trends of threats]
+&gt; ### .lightgray[status &amp; trends of threats]
 
 
 ---
@@ -313,6 +288,39 @@ class: inverse, center, middle
 
 ---
 
+# Collaborators
+
+.pull-left[
+
+### .green[ Brett Bowersox (IDFG) ]
+
+### .green[ Dan Brewer (USFWS) ]
+
+### .blue[ Erin Britton-Kuttel (USFWS) ]
+
+### .blue[ Sean Finn (USFWS) ]
+
+### .green[ Stephanie Gunckel (ODFW) ]
+
+]
+
+.pull-right[
+
+### .blue[ Craig Hansen (USFWS) ]
+
+### .blue[ Rebecca Migala (USFWS) ]
+
+### .blue[ Dan Nolfi (USFWS) ]
+
+### .green[ Marie Winkowski (WDFW) ]
+
+### .blue[ Alan Yanahan (USFWS) ]
+
+]
+
+
+---
+
 class: frimg
 background-image: url(figs/bull_trout_art.png)
 background-position: 50% 90%
@@ -320,17 +328,17 @@ background-size: 40%
 
 # Bull trout *Salvelinus confluentus*
 
-### .green[
+&gt; ### .green[
 Native to the Pacific Northwest &amp; Canada
 ]
 
-### .green[4 different life histories (resident, riverine, lacustrine, anadromous)
+&gt; ### .green[4 different life histories (resident, riverine, lacustrine, anadromous)
 ]
 
-### .green[ Mature at 4-7 years of age
+&gt; ### .green[ Mature at 4-7 years of age
 ]
 
-### .green[ Listed as threatened under the ESA in 1999
+&gt; ### .green[ Listed as threatened under the ESA in 1999
 ]
 
 
@@ -375,7 +383,7 @@ class: inverse, center, middle
 
 `$$\Large{N_t = N_{t-1} \exp(u + w_t)}$$`
 
-### .blue[and on a log scale]
+### .blue[such that on a log scale]
 
 `$$\Large{\log (N_t) = \log (N_{t-1}) + u + w_t}$$`
 
@@ -481,9 +489,9 @@ class: center
 
 # Observation model for multiple time series
 
-## .blue[ Core areas comprise 1-22 populations ]
+&gt; ## .blue[ Core areas comprise 1-22 populations ]
 
-## .blue[ Each population is considered an observation from its respective core area ]
+&gt; ## .blue[ Each population is considered an observation from its respective core area ]
 
 
 ---
@@ -522,11 +530,11 @@ background-size: 80%
 
 # Varying sampling methods
 
-## .blue[ 
+&gt; ## .blue[ 
 Different methods have different observation errors
 ]
 
-## .blue[
+&gt; ## .blue[
 Ex: Weir counts are more precise than snorkel surveys
 ]
 
@@ -535,14 +543,14 @@ Ex: Weir counts are more precise than snorkel surveys
 
 class: center, middle, inverse
 
-# Multiple surveys of each type help inform the variance estimates 
+# Multiple surveys of each type&lt;br&gt;help inform the variance estimates 
 
 
 ---
 
 # Observation model for multiple time series
 
-## .center.blue[ Example of 5 popns across 2 core areas (A &amp; B) ]
+## .center.blue[ Example of 5 popns from 2 core areas (_A_, _B_) ]
 
 `$$\Large{\begin{gathered}
     y_{1,t} = x_{A,t} + v_{1,t} \\
@@ -556,16 +564,16 @@ class: center, middle, inverse
 
 ---
 
-# Observation model for multiple time series
+# Observation errors for multiple time series
 
-## .center.blue[ Example of 5 popns, 2 core areas via 2 methods (i &amp; j)]
+## .center.blue[ Example of 5 popns from 2 core areas via 2 methods (_j_, _k_)]
 
 `$$\Large{\begin{gathered}
-    v_{1,t} \sim \text{N}(0, r_i) \\
-    v_{2,t} \sim \text{N}(0, r_j) \\
+    v_{1,t} \sim \text{N}(0, r_j) \\
+    v_{2,t} \sim \text{N}(0, r_k) \\
     \hline 
-    v_{3,t} \sim \text{N}(0, r_j) \\
-    v_{4,t} \sim \text{N}(0, r_i) \\
+    v_{3,t} \sim \text{N}(0, r_k) \\
+    v_{4,t} \sim \text{N}(0, r_k) \\
     v_{5,t} \sim \text{N}(0, r_j)
   \end{gathered}}$$`
 
@@ -574,29 +582,29 @@ class: center, middle, inverse
 
 # Fitting the models
 
-## .blue[ Used the 30-year time period from 1991-2020 ]
+&gt; ## .blue[ Used the 30-year time period from 1991-2020 ]
 
-## .blue[ Time series needed &amp;ge;10 years of non-missing data ]
+&gt; ## .blue[ Time series needed &amp;ge;10 years of non-missing data ]
 
 
 ---
 
 # Fitting the models
 
-## .blue[ Used the 30-year time period from 1991-2020 ]
+&gt; ## .blue[ Used the 30-year time period from 1991-2020 ]
 
-## .blue[ Time series needed &amp;ge;10 years of non-missing data ]
+&gt; ## .blue[ Time series needed &amp;ge;10 years of non-missing data ]
 
-## .green[ All models fit in **R** using the `{MARSS}` package ]
+&gt; ## .green[ All models fit in **R** using the `{MARSS}` package ]
 
-## .green[ Estimated 90% confidence intervals on bias terms ]
+&gt; ## .green[ Estimated 90% confidence intervals on bias terms ]
 
 
 ---
 
 # Bias in trends
 
-## .blue[ 37/62 core areas had a negative trend ]
+&gt; ## .blue[ 37/62 core areas had a negative trend ]
 
 ## .center.blue[ but only 3/62 were "significantly" negative ]
 
@@ -625,13 +633,13 @@ background-size: 65%
 
 # Bias in trends
 
-## .blue[ 37/62 core areas had a negative trend ]
+&gt; ## .blue[ 37/62 core areas had a negative trend ]
 
 ## .center.blue[ but only 3/62 were "significantly" negative ]
 
 &lt;br&gt;
 
-## .green[ 25/62 core areas had a positive trend ]
+&gt; ## .green[ 25/62 core areas had a positive trend ]
 
 ## .center.green[ but only 5/62 were "significantly" positive ]
 
@@ -670,7 +678,7 @@ background-size: 65%
 
 class: inverse, center, middle
 
-# Data quality influences our ability to estimate biases
+# Data quality influences our ability&lt;br&gt;to estimate biases
 
 ---
 
@@ -696,7 +704,7 @@ background-size: 65%
 
 # Big picture
 
-## .blue[
+&gt; ## .blue[
 Status of bull trout in the Pacific Northwest is mixed 
 ]
 
@@ -707,55 +715,58 @@ Status of bull trout in the Pacific Northwest is mixed
 
 # Big picture
 
-.blue[
-## Status of bull trout in the Pacific Northwest is mixed 
-
-## Data quality affects our ability to assess trends
+&gt; ## .blue[
+Status of bull trout in the Pacific Northwest is mixed 
 ]
 
-.footnote.purple[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#844870;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; scheuerl@uw.edu]
+&gt; ## .blue[
+Data quality affects our ability to assess trends
+]
 
-.citation.blue[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#488fdf;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"&gt;&lt;/path&gt;&lt;/svg&gt; @mark_scheuerell]
+### .citation.purple[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#844870;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; scheuerl@uw.edu]
 
 
 ---
 
 # Big picture
 
-.blue[
-## Status of bull trout in the Pacific Northwest is mixed 
-
-## Data quality affects our ability to assess trends
-
-## State-space models can help 
+&gt; ## .blue[
+Status of bull trout in the Pacific Northwest is mixed 
 ]
 
-.footnote.purple[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#844870;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; scheuerl@uw.edu]
+&gt; ## .blue[
+Data quality affects our ability to assess trends
+]
 
-.citation.blue[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#488fdf;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"&gt;&lt;/path&gt;&lt;/svg&gt; @mark_scheuerell]
+&gt; ## .blue[
+State-space models can help 
+]
+
+### .citation.purple[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#844870;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; scheuerl@uw.edu]
 
 
 ---
 
 ## Open science
 
-### https://github.com/mdscheuerell/bulltrout
+&gt; ### https://github.com/mdscheuerell/bulltrout
 
 ## Image credits
 
-.blue[
-#### Chimps: *Lantern Press*  
-
-#### Carnival: *Frank Kovalchek*   
-
-#### Robin Hood: *John Escott*  
-
-#### Bull trout sampling: *Brett Bowersox*  
+&gt; ### .blue[
+Chimps: *Lantern Press*  
+]
+&gt; ### .blue[
+Carnival: *Frank Kovalchek*   
+]
+&gt; ### .blue[
+Robin Hood: *John Escott*  
+]
+&gt; ### .blue[
+Bull trout sampling: *Brett Bowersox*  
 ]
 
-.footnote.purple[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#844870;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; scheuerl@uw.edu]
-
-.citation.blue[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#488fdf;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"&gt;&lt;/path&gt;&lt;/svg&gt; @mark_scheuerell]
+### .citation.purple[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#844870;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; scheuerl@uw.edu]
 
 
 ---

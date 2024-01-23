@@ -51,78 +51,54 @@ style_duo(
     green = "#339933",
     white = "#FFFFFF",
     blue = "#488fdf",
-    gray = "#808080"
-  ),
+    gray = "#808080",
+    lightgray = "#bdbdbd"
+),
   header_font_google = google_font("Roboto Condensed", "400", "400i", "700"),
   text_font_google = google_font("Cabin", "400", "400i", "700"),
 )
 ```
 
 
+# Two vignettes
 
-# Collaborators
+> ## .blue[ Bull trout in the Pacific Northwest ]
 
-.pull-left[
-
-### .green[ Brett Bowersox (IDFG) ]
-
-### .green[ Dan Brewer (USFWS) ]
-
-### .blue[ Erin Britton-Kuttel (USFWS) ]
-
-### .blue[ Sean Finn (USFWS) ]
-
-### .green[ Stephanie Gunckel (ODFW) ]
-
-]
-
-.pull-right[
-
-### .blue[ Craig Hansen (USFWS) ]
-
-### .blue[ Rebecca Migala (USFWS) ]
-
-### .blue[ Dan Nolfi (USFWS) ]
-
-### .green[ Marie Winkowski (WDFW) ]
-
-### .blue[ Alan Yanahan (USFWS) ]
-
-]
+> ## .green[ Restoration spending in the Columbia basin ]
 
 
 ---
 
 # ESA status reviews
 
-### .blue[Required every 5 years to ensure appropriate protections]
+## .blue[Required every 5 years to ensure appropriate protections]
 
-### .blue[Considerations include]
+## .blue[Considerations include]
 
-* ### .gray[population trends, distribution, demographics & genetics]
+> ### .gray[population trends, distribution, demographics & genetics]
 
-* ### .gray[habitat conditions]
+> ### .gray[habitat conditions]
 
-* ### .gray[past conservation measures]
+> ### .gray[past conservation measures]
 
-* ### .gray[status & trends of threats]
+> ### .gray[status & trends of threats]
 
 
 ---
 
 # ESA status reviews
 
-### .blue[Required every 5 years to ensure appropriate protections]
+## .blue[Required every 5 years to ensure appropriate protections]
 
-### .blue[Considerations include]
+## .blue[Considerations include]
 
-* ### .green[population trends].gray[, distribution, demographics & genetics]
+> ### .green[population trends].lightgray[, distribution, demographics & genetics]
 
-* ### .gray[habitat conditions]
+> ### .lightgray[habitat conditions]
 
-* ### .gray[past conservation measures]
+> ### .lightgray[past conservation measures]
 
-* ### .gray[status & trends of threats]
+> ### .lightgray[status & trends of threats]
 
 
 ---
@@ -450,6 +426,39 @@ class: inverse, center, middle
 
 ---
 
+# Collaborators
+
+.pull-left[
+
+### .green[ Brett Bowersox (IDFG) ]
+
+### .green[ Dan Brewer (USFWS) ]
+
+### .blue[ Erin Britton-Kuttel (USFWS) ]
+
+### .blue[ Sean Finn (USFWS) ]
+
+### .green[ Stephanie Gunckel (ODFW) ]
+
+]
+
+.pull-right[
+
+### .blue[ Craig Hansen (USFWS) ]
+
+### .blue[ Rebecca Migala (USFWS) ]
+
+### .blue[ Dan Nolfi (USFWS) ]
+
+### .green[ Marie Winkowski (WDFW) ]
+
+### .blue[ Alan Yanahan (USFWS) ]
+
+]
+
+
+---
+
 class: frimg
 background-image: url(figs/bull_trout_art.png)
 background-position: 50% 90%
@@ -457,17 +466,17 @@ background-size: 40%
 
 # Bull trout *Salvelinus confluentus*
 
-### .green[
+> ### .green[
 Native to the Pacific Northwest & Canada
 ]
 
-### .green[4 different life histories (resident, riverine, lacustrine, anadromous)
+> ### .green[4 different life histories (resident, riverine, lacustrine, anadromous)
 ]
 
-### .green[ Mature at 4-7 years of age
+> ### .green[ Mature at 4-7 years of age
 ]
 
-### .green[ Listed as threatened under the ESA in 1999
+> ### .green[ Listed as threatened under the ESA in 1999
 ]
 
 
@@ -512,7 +521,7 @@ $$\Large{N_t = N_{t-1} \exp(u + w_t)}$$
 
 $$\Large{N_t = N_{t-1} \exp(u + w_t)}$$
 
-### .blue[and on a log scale]
+### .blue[such that on a log scale]
 
 $$\Large{\log (N_t) = \log (N_{t-1}) + u + w_t}$$
 
@@ -692,9 +701,9 @@ $$\Large{\begin{gathered}
 
 # Observation model for multiple time series
 
-## .blue[ Core areas comprise 1-22 populations ]
+> ## .blue[ Core areas comprise 1-22 populations ]
 
-## .blue[ Each population is considered an observation from its respective core area ]
+> ## .blue[ Each population is considered an observation from its respective core area ]
 
 
 ---
@@ -752,11 +761,11 @@ background-size: 80%
 
 # Varying sampling methods
 
-## .blue[ 
+> ## .blue[ 
 Different methods have different observation errors
 ]
 
-## .blue[
+> ## .blue[
 Ex: Weir counts are more precise than snorkel surveys
 ]
 
@@ -765,14 +774,14 @@ Ex: Weir counts are more precise than snorkel surveys
 
 class: center, middle, inverse
 
-# Multiple surveys of each type help inform the variance estimates 
+# Multiple surveys of each type<br>help inform the variance estimates 
 
 
 ---
 
 # Observation model for multiple time series
 
-## .center.blue[ Example of 5 popns across 2 core areas (A & B) ]
+## .center.blue[ Example of 5 popns from 2 core areas (_A_, _B_) ]
 
 $$\Large{\begin{gathered}
     y_{1,t} = x_{A,t} + v_{1,t} \\
@@ -786,16 +795,16 @@ $$\Large{\begin{gathered}
 
 ---
 
-# Observation model for multiple time series
+# Observation errors for multiple time series
 
-## .center.blue[ Example of 5 popns, 2 core areas via 2 methods (i & j)]
+## .center.blue[ Example of 5 popns from 2 core areas via 2 methods (_j_, _k_)]
 
 $$\Large{\begin{gathered}
-    v_{1,t} \sim \text{N}(0, r_i) \\
-    v_{2,t} \sim \text{N}(0, r_j) \\
+    v_{1,t} \sim \text{N}(0, r_j) \\
+    v_{2,t} \sim \text{N}(0, r_k) \\
     \hline 
-    v_{3,t} \sim \text{N}(0, r_j) \\
-    v_{4,t} \sim \text{N}(0, r_i) \\
+    v_{3,t} \sim \text{N}(0, r_k) \\
+    v_{4,t} \sim \text{N}(0, r_k) \\
     v_{5,t} \sim \text{N}(0, r_j)
   \end{gathered}}$$
 
@@ -804,29 +813,29 @@ $$\Large{\begin{gathered}
 
 # Fitting the models
 
-## .blue[ Used the 30-year time period from 1991-2020 ]
+> ## .blue[ Used the 30-year time period from 1991-2020 ]
 
-## .blue[ Time series needed &ge;10 years of non-missing data ]
+> ## .blue[ Time series needed &ge;10 years of non-missing data ]
 
 
 ---
 
 # Fitting the models
 
-## .blue[ Used the 30-year time period from 1991-2020 ]
+> ## .blue[ Used the 30-year time period from 1991-2020 ]
 
-## .blue[ Time series needed &ge;10 years of non-missing data ]
+> ## .blue[ Time series needed &ge;10 years of non-missing data ]
 
-## .green[ All models fit in **R** using the `{MARSS}` package ]
+> ## .green[ All models fit in **R** using the `{MARSS}` package ]
 
-## .green[ Estimated 90% confidence intervals on bias terms ]
+> ## .green[ Estimated 90% confidence intervals on bias terms ]
 
 
 ---
 
 # Bias in trends
 
-## .blue[ 37/62 core areas had a negative trend ]
+> ## .blue[ 37/62 core areas had a negative trend ]
 
 ## .center.blue[ but only 3/62 were "significantly" negative ]
 
@@ -855,13 +864,13 @@ background-size: 65%
 
 # Bias in trends
 
-## .blue[ 37/62 core areas had a negative trend ]
+> ## .blue[ 37/62 core areas had a negative trend ]
 
 ## .center.blue[ but only 3/62 were "significantly" negative ]
 
 <br>
 
-## .green[ 25/62 core areas had a positive trend ]
+> ## .green[ 25/62 core areas had a positive trend ]
 
 ## .center.green[ but only 5/62 were "significantly" positive ]
 
@@ -900,7 +909,7 @@ background-size: 65%
 
 class: inverse, center, middle
 
-# Data quality influences our ability to estimate biases
+# Data quality influences our ability<br>to estimate biases
 
 ---
 
@@ -926,7 +935,7 @@ background-size: 65%
 
 # Big picture
 
-## .blue[
+> ## .blue[
 Status of bull trout in the Pacific Northwest is mixed 
 ]
 
@@ -937,55 +946,58 @@ Status of bull trout in the Pacific Northwest is mixed
 
 # Big picture
 
-.blue[
-## Status of bull trout in the Pacific Northwest is mixed 
-
-## Data quality affects our ability to assess trends
+> ## .blue[
+Status of bull trout in the Pacific Northwest is mixed 
 ]
 
-.footnote.purple[`r icon_style(fontawesome("envelope"), fill = "#844870")` scheuerl@uw.edu]
+> ## .blue[
+Data quality affects our ability to assess trends
+]
 
-.citation.blue[`r icon_style(fontawesome("twitter"), fill = "#488fdf")` @mark_scheuerell]
+### .citation.purple[`r icon_style(fontawesome("envelope"), fill = "#844870")` scheuerl@uw.edu]
 
 
 ---
 
 # Big picture
 
-.blue[
-## Status of bull trout in the Pacific Northwest is mixed 
-
-## Data quality affects our ability to assess trends
-
-## State-space models can help 
+> ## .blue[
+Status of bull trout in the Pacific Northwest is mixed 
 ]
 
-.footnote.purple[`r icon_style(fontawesome("envelope"), fill = "#844870")` scheuerl@uw.edu]
+> ## .blue[
+Data quality affects our ability to assess trends
+]
 
-.citation.blue[`r icon_style(fontawesome("twitter"), fill = "#488fdf")` @mark_scheuerell]
+> ## .blue[
+State-space models can help 
+]
+
+### .citation.purple[`r icon_style(fontawesome("envelope"), fill = "#844870")` scheuerl@uw.edu]
 
 
 ---
 
 ## Open science
 
-### https://github.com/mdscheuerell/bulltrout
+> ### https://github.com/mdscheuerell/bulltrout
 
 ## Image credits
 
-.blue[
-#### Chimps: *Lantern Press*  
-
-#### Carnival: *Frank Kovalchek*   
-
-#### Robin Hood: *John Escott*  
-
-#### Bull trout sampling: *Brett Bowersox*  
+> ### .blue[
+Chimps: *Lantern Press*  
+]
+> ### .blue[
+Carnival: *Frank Kovalchek*   
+]
+> ### .blue[
+Robin Hood: *John Escott*  
+]
+> ### .blue[
+Bull trout sampling: *Brett Bowersox*  
 ]
 
-.footnote.purple[`r icon_style(fontawesome("envelope"), fill = "#844870")` scheuerl@uw.edu]
-
-.citation.blue[`r icon_style(fontawesome("twitter"), fill = "#488fdf")` @mark_scheuerell]
+### .citation.purple[`r icon_style(fontawesome("envelope"), fill = "#844870")` scheuerl@uw.edu]
 
 
 ---
