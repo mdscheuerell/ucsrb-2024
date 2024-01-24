@@ -985,11 +985,26 @@ class: inverse, center, middle
 
 ---
 
-# Background
+# Collaborator
 
-> # .blue[ Several species/ESUs are currently listed under ESA ]
+<br>
 
-> # .blue[ Many declines attributed to "4 H's" ]
+# .blue.center[Bill Jaeger<br>Department of Applied Economics<br>Oregon State Univeristy]
+
+
+---
+
+class: frimg, inverse-black, center
+background-image: url(figs/columbia_map.png)
+background-position: 50% 50%
+background-size: 63%
+
+
+---
+
+# Long history
+
+> ## .blue[ Problems acknowledged in the 1938 Mitchell Act ]
 
 
 ---
@@ -1067,6 +1082,23 @@ class: inverse, center, middle
 
 ---
 
+# Habitat restoration
+
+> ## .blue[ 15,000+ restoration projects undertaken<br>at an annual cost of over $150 million]
+
+### .citation.gray[Katz & Barnas (2010) _Fisheries_]
+
+
+---
+
+class: frimg, inverse-black
+background-image: url(figs/mcnary_dam.jpg)
+background-position: 50% 50%
+background-size: 85%
+
+
+---
+
 class: frimg, center
 background-image: url(figs/releases.png)
 background-position: 40% 80%
@@ -1098,7 +1130,20 @@ background-size: 70%
 
 <br>
 
-## .center[.purple[Returns] = .purple[Spawners] + .blue[Ocean] + .aqua[Flow] + .orange[Releases] + .green[Spending]]
+## .center[.purple[Returns] = .purple[Spawners] + .blue[Ocean] + .aqua[River] + .orange[Releases] + .green[Spending]]
+
+
+---
+
+# More formally (in log space)
+
+<br>
+
+## .center[.purple[Returns] = .purple[Spawners] + .blue[Ocean] + .aqua[River] + .orange[Releases] + .green[Spending]]
+
+<br>
+
+## Covariates lagged to match life history
 
 
 ---
@@ -1123,24 +1168,17 @@ background-size: 70%
 
 ---
 
-# Open science
+# Find out more
 
-> ### https://github.com/mdscheuerell/bulltrout
+<br>
 
-# Image credits
+.pull-left.center[<img src="figs/QR_bulltrout.png" width=300 height=300>]
 
-> ### .blue[
-Chimps: *Lantern Press*  
-]
-> ### .blue[
-Carnival: *Frank Kovalchek*   
-]
-> ### .blue[
-Robin Hood: *John Escott*  
-]
-> ### .blue[
-Bull trout sampling: *Brett Bowersox*  
-]
+.pull-right.center[<img src="figs/QR_columbia.png" width=300 height=300>]
+
+### .pull-left.center.blue[Bull trout]
+
+### .pull-right.center.green[Columbia spending]
 
 ### .citation.purple[`r icon_style(fontawesome("envelope"), fill = "#844870")` scheuerl@uw.edu]
 
