@@ -65,6 +65,7 @@
   --green: #339933;
   --white: #FFFFFF;
   --blue: #488fdf;
+  --aqua: #80cdc1;
   --gray: #808080;
   --lightgray: #bdbdbd;
 }
@@ -327,6 +328,12 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 }
 .bg-blue {
   background-color: var(--blue);
+}
+.aqua {
+  color: var(--aqua);
+}
+.bg-aqua {
+  background-color: var(--aqua);
 }
 .gray {
   color: var(--gray);
