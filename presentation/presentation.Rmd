@@ -51,6 +51,7 @@ style_duo(
     green = "#339933",
     white = "#FFFFFF",
     blue = "#488fdf",
+    aqua = "#80cdc1",
     gray = "#808080",
     lightgray = "#bdbdbd"
 ),
@@ -240,7 +241,6 @@ Age structure
 ## .center.purple[
 Reproductive status
 ]
-
 
 
 ---
@@ -978,45 +978,66 @@ State-space models can help
 
 ---
 
-## Open science
+class: inverse, center, middle
 
-> ### https://github.com/mdscheuerell/bulltrout
-
-## Image credits
-
-> ### .blue[
-Chimps: *Lantern Press*  
-]
-> ### .blue[
-Carnival: *Frank Kovalchek*   
-]
-> ### .blue[
-Robin Hood: *John Escott*  
-]
-> ### .blue[
-Bull trout sampling: *Brett Bowersox*  
-]
-
-### .citation.purple[`r icon_style(fontawesome("envelope"), fill = "#844870")` scheuerl@uw.edu]
+# Restoration spending<br>in the Columbia River basin
 
 
 ---
 
-class: frimg, center
-background-image: url(figs/adult_returns.png)
-background-position: 40% 80%
-background-size: 70%
+# Background
 
-# Adult returns to Bonneville
+> # .blue[ Several species/ESUs are currently listed under ESA ]
+
+> # .blue[ Many declines attributed to "4 H's" ]
+
 
 ---
 
-class: frimg, center
-background-image: url(figs/releases.png)
-background-position: 40% 80%
-background-size: 70%
+class: center, middle
 
-# Hatchery releases
+<br>
+
+# .center.green[
+Hydropower
+]
+# .center.blue[
+Harvest
+]
+# .center.orange[
+Hatcheries
+]
+# .center.purple[
+Habitat
+]
+
+
+---
+
+class: center, middle
+
+<br>
+
+# .center.green[
+Non-native species
+]
+# .center.blue[
+Pinnipeds
+]
+# .center.orange[
+Climate change
+]
+# .center.purple[
+Chemicals
+]
+
+
+---
+
+class: inverse, middle
+
+> # Solution?<br><br>Spend some money on restoration activities
+
 
 ---
 
@@ -1036,5 +1057,91 @@ background-size: 70%
 
 # Cumulative spending
 
+
+---
+
+class: inverse, center, middle
+
+> # How is the money spent?
+
+
+---
+
+class: frimg, center
+background-image: url(figs/releases.png)
+background-position: 40% 80%
+background-size: 70%
+
+# Hatchery releases
+
+
+---
+
+class: inverse, center, middle
+
+> # And what has this done for salmon?
+
+
+---
+
+class: frimg, center
+background-image: url(figs/adult_returns.png)
+background-position: 40% 80%
+background-size: 70%
+
+# Adult returns to Bonneville
+
+
+---
+
+# More formally (in log space)
+
+<br>
+
+## .center[.purple[Returns] = .purple[Spawners] + .blue[Ocean] + .aqua[Flow] + .orange[Releases] + .green[Spending]]
+
+
+---
+
+class: frimg, center
+background-image: url(figs/model_fits_h.png)
+background-position: 40% 80%
+background-size: 70%
+
+# Comparing model fits
+
+
+---
+
+class: frimg, center
+background-image: url(figs/model_fits.png)
+background-position: 40% 80%
+background-size: 70%
+
+# Comparing model fits
+
+
+---
+
+# Open science
+
+> ### https://github.com/mdscheuerell/bulltrout
+
+# Image credits
+
+> ### .blue[
+Chimps: *Lantern Press*  
+]
+> ### .blue[
+Carnival: *Frank Kovalchek*   
+]
+> ### .blue[
+Robin Hood: *John Escott*  
+]
+> ### .blue[
+Bull trout sampling: *Brett Bowersox*  
+]
+
+### .citation.purple[`r icon_style(fontawesome("envelope"), fill = "#844870")` scheuerl@uw.edu]
 
 
