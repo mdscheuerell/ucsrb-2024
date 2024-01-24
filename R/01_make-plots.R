@@ -31,6 +31,14 @@ releases <- data_raw %>%
          sock_rel = sock_rel / 1e6,
          sthd_rel = sthd_rel / 1e6)
 
+## get model fits
+model_fits <- read.csv(here::here("data", "model_fits.csv")) %>%
+  filter(year >= 1980) %>%
+  mutate(fitted = fitted / 1000,
+         fitted_s = fitted_s / 1000,
+         actual = actual / 1000) %>%
+  select(year, actual, fitted, fitted_s)
+
 
 #### make plots ####
 
@@ -111,3 +119,47 @@ legend(x = 2010, y = 30, xjust = 0.5, yjust = 0.5,
 dev.off()
 
 
+## model fits 
+
+png(file = here::here("presentation", "figs", "model_fits.png"),
+    width = 8, height = 5, units = "in", res = 300)
+
+par(mai = c(0.9, 0.9, 0.1, 0.1),
+    omi = c(0.1, 0.1, 0.1, 0.1))
+matplot(model_fits[,"year"], model_fits[,-1],
+        type = "o", lty = "solid", pch = 16, lwd = 2,
+        col = c("#5e3c99", "#2b83ba", "#ca0020"),
+        xlab = "Year", ylab = "Returns (1000s)",
+        ylim = range(model_fits[,-1], na.rm = TRUE),
+        cex.axis = 1.4, cex.lab = 1.6)
+legend(x = 1985, y = 2000, xjust = 0.3, yjust = 0.5,
+       legend = c("Actual", "Model fit", "Model fit - releases"),
+       col = c("#5e3c99", "#2b83ba", "#ca0020"),
+       text.col = c("#5e3c99", "#2b83ba", "#ca0020"),
+       bty = "n", lty = "solid", pch = 16, lwd = 2,
+       y.intersp = 1.2)
+
+dev.off()
+
+
+## model fits minus releases
+
+png(file = here::here("presentation", "figs", "model_fits_h.png"),
+    width = 8, height = 5, units = "in", res = 300)
+
+par(mai = c(0.9, 0.9, 0.1, 0.1),
+    omi = c(0.1, 0.1, 0.1, 0.1))
+matplot(model_fits[,"year"], model_fits[,c("actual", "fitted")],
+        type = "o", lty = "solid", pch = 16, lwd = 2,
+        col = c("#5e3c99", "#2b83ba"),
+        xlab = "Year", ylab = "Returns (1000s)",
+        ylim = range(model_fits[,-1], na.rm = TRUE),
+        cex.axis = 1.4, cex.lab = 1.6)
+legend(x = 1985, y = 2000, xjust = 0.3, yjust = 0.5,
+       legend = c("Actual", "Model fit", "Model fit - releases"),
+       col = c("#5e3c99", "#2b83ba", "white"),
+       text.col = c("#5e3c99", "#2b83ba", "white"),
+       bty = "n", lty = "solid", pch = 16, lwd = 2,
+       y.intersp = 1.2)
+
+dev.off()
