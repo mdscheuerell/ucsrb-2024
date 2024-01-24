@@ -3,8 +3,8 @@ title: "Large-scale status assessments of at-risk species and efforts to recover
 subtitle: "Mark D. Scheuerell"  
 # subtitle: "Upper Columbia Salmon Conference<br>Wenatchee, WA<br>25 Januray 2024"  
 author: 
-#  - "Mark D. Scheuerell"
-  - "U.S. Geological Survey<br>Washington Cooperative Fish and Wildlife Research Unit<br>School of Aquatic and Fishery Sciences<br>University of Washington"
+#  - "Mark Scheuerell"
+  - "_U.S. Geological Survey<br>Washington Cooperative Fish and Wildlife Research Unit<br>School of Aquatic and Fishery Sciences<br>University of Washington_"
 # date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
@@ -499,7 +499,7 @@ class: inverse, center, middle
 
 # Simple model of population dynamics
 
-### .blue[Exponential growth/decline in continuous time]
+### .blue.center[Exponential growth/decline in continuous time]
 
 $$\Large{N(t) = N_0 ~ \underbrace{\exp(u)}_{\substack{\text{rate of} \\ \text{change}}} \underbrace{\exp(w t)}_{\substack{\text{stochastic} \\ \text{environment}}}}$$
 
@@ -508,7 +508,7 @@ $$\Large{N(t) = N_0 ~ \underbrace{\exp(u)}_{\substack{\text{rate of} \\ \text{ch
 
 # Simple model of population dynamics
 
-### .blue[In discrete time, with a time step of 1 year]
+### .blue.center[In discrete time, with a time step of 1 year]
 
 $$\Large{N_t = N_{t-1} \exp(u + w_t)}$$
 
@@ -517,15 +517,15 @@ $$\Large{N_t = N_{t-1} \exp(u + w_t)}$$
 
 # Simple model of population dynamics
 
-### .blue[In discrete time, with a time step of 1 year]
+### .blue.center[In discrete time, with a time step of 1 year]
 
 $$\Large{N_t = N_{t-1} \exp(u + w_t)}$$
 
-### .blue[such that on a log scale]
+### .blue.center[such that on a log scale]
 
 $$\Large{\log (N_t) = \log (N_{t-1}) + u + w_t}$$
 
-### .blue[which we can rewrite as]
+### .blue.center[which we can rewrite as]
 
 $$\Large{x_t = x_{t-1} + u + w_t}$$
 
@@ -534,7 +534,7 @@ $$\Large{x_t = x_{t-1} + u + w_t}$$
 
 # Biased random walk
 
-### .blue[If we assume that the errors are white noise]
+### .blue.center[If we assume that the errors are white noise]
 
 $$\Large{w_t \sim \text{N}(0, q)}$$
 
@@ -543,15 +543,15 @@ $$\Large{w_t \sim \text{N}(0, q)}$$
 
 # Biased random walk
 
-### .blue[If we assume that the errors are white noise]
+### .blue.center[If we assume that the errors are white noise]
 
 $$\Large{w_t \sim \text{N}(0, q)}$$
 
-### .blue[ then our model of populations dynamics]
+### .blue.center[ then our model of populations dynamics]
 
 $$\Large{x_t = x_{t-1} + u + w_t}$$
 
-### .blue[is known as a] *biased random walk*
+### .center[.blue[is a] *biased random walk*]
 
 
 ---
@@ -759,19 +759,6 @@ background-size: 80%
 
 ---
 
-# Varying sampling methods
-
-> ## .blue[ 
-Different methods have different observation errors
-]
-
-> ## .blue[
-Ex: Weir counts are more precise than snorkel surveys
-]
-
-
----
-
 class: center, middle, inverse
 
 # Multiple surveys of each type<br>help inform the variance estimates 
@@ -800,6 +787,15 @@ $$\Large{\begin{gathered}
 ## .center.blue[ Example of 5 popns from 2 core areas via 2 methods (_j_, _k_)]
 
 $$\Large{\begin{gathered}
+    y_{1,t} = x_{A,t} + v_{1,t} \\
+    y_{2,t} = x_{A,t} + v_{2,t} \\
+    \hline 
+    y_{3,t} = x_{B,t} + v_{3,t} \\
+    y_{4,t} = x_{B,t} + v_{4,t} \\
+    y_{5,t} = x_{B,t} + v_{5,t}
+  \end{gathered}}
+  ~~~~~~~~~~~
+  \Large{\begin{gathered}
     v_{1,t} \sim \text{N}(0, r_j) \\
     v_{2,t} \sim \text{N}(0, r_k) \\
     \hline 
@@ -989,7 +985,7 @@ class: inverse, center, middle
 
 <br>
 
-# .blue.center[Bill Jaeger<br>Department of Applied Economics<br>Oregon State Univeristy]
+# .blue.center[Bill Jaeger<br>_Department of Applied Economics_<br>_Oregon State Univeristy_]
 
 
 ---
@@ -1034,10 +1030,10 @@ class: center, middle
 <br>
 
 # .center.green[
-Non-native species
+Non-native piscivores
 ]
 # .center.blue[
-Pinnipeds
+Pinnipeds & birds
 ]
 # .center.orange[
 Climate change
@@ -1063,6 +1059,9 @@ background-size: 70%
 
 # Annual spending
 
+#### .citation.gray[US Fish Wildlife Service]
+
+
 ---
 
 class: frimg, center
@@ -1071,6 +1070,8 @@ background-position: 40% 80%
 background-size: 70%
 
 # Cumulative spending
+
+#### .citation.gray[US Fish Wildlife Service]
 
 
 ---
@@ -1106,6 +1107,8 @@ background-size: 70%
 
 # Hatchery releases
 
+#### .citation.gray[Regional Mark Processing Center]
+
 
 ---
 
@@ -1123,14 +1126,7 @@ background-size: 70%
 
 # Adult returns to Bonneville
 
-
----
-
-# More formally (in log space)
-
-<br>
-
-## .center[.purple[Returns] = .purple[Spawners] + .blue[Ocean] + .aqua[River] + .orange[Releases] + .green[Spending]]
+#### .citation.gray[Fish Passage Center]
 
 
 ---
@@ -1139,11 +1135,20 @@ background-size: 70%
 
 <br>
 
-## .center[.purple[Returns] = .purple[Spawners] + .blue[Ocean] + .aqua[River] + .orange[Releases] + .green[Spending]]
+## .center[Returns = .purple[Spawners] + .blue[Ocean] + .aqua[River] + .orange[Releases] + .green[Spending]]
+
+
+---
+
+# More formally (in log space)
 
 <br>
 
-## Covariates lagged to match life history
+## .center[Returns = .purple[Spawners] + .blue[Ocean] + .aqua[River] + .orange[Releases] + .green[Spending]]
+
+<br>
+
+## Predictors lagged to match life history
 
 
 ---
