@@ -1005,6 +1005,18 @@ background-size: 63%
 
 ---
 
+# Recovery efforts
+
+> ## .blue[ Actions involve 11 federal agencies ]
+
+> ## .blue[ 1980 Northwest Power Act obligates BPA to provide equitable treatment to fish and wildlife]
+
+> ## .blue[ Northwest Power and Conservation Council responsible for supporting conservation and
+determining whether actions are cost-effective ]
+
+
+---
+
 class: center, middle
 
 <br>
@@ -1169,6 +1181,24 @@ background-position: 40% 80%
 background-size: 70%
 
 # Comparing model fits
+
+
+---
+
+# A conundrum
+
+> ## .blue[Spending & hatchery releases are confounded]
+
+> ## .blue[Solution was to use a counterfactual]
+
+
+---
+
+# Returns of hatchery fish
+
+> ## .blue[Applied smolt-to-adult survival to hatchery releases]
+
+> ## .blue[Calculated expected adult returns]
 
 
 ---
