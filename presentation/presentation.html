@@ -362,7 +362,7 @@ class: inverse, center, middle
 
 ### .blue.center[Exponential growth/decline in continuous time]
 
-`$$\Large{N(t) = N_0 ~ \underbrace{\exp(u)}_{\substack{\text{rate of} \\ \text{change}}} \underbrace{\exp(w t)}_{\substack{\text{stochastic} \\ \text{environment}}}}$$`
+`$$\huge{N(t) = N_0 ~ \underbrace{\exp(u)}_{\substack{\text{rate of} \\ \text{change}}} \underbrace{\exp(w t)}_{\substack{\text{stochastic} \\ \text{environment}}}}$$`
 
 
 ---
@@ -371,7 +371,7 @@ class: inverse, center, middle
 
 ### .blue.center[In discrete time, with a time step of 1 year]
 
-`$$\Large{N_t = N_{t-1} \exp(u + w_t)}$$`
+`$$\huge{N_t = N_{t-1} \exp(u + w_t)}$$`
 
 
 ---
@@ -380,15 +380,15 @@ class: inverse, center, middle
 
 ### .blue.center[In discrete time, with a time step of 1 year]
 
-`$$\Large{N_t = N_{t-1} \exp(u + w_t)}$$`
+`$$\huge{N_t = N_{t-1} \exp(u + w_t)}$$`
 
 ### .blue.center[such that on a log scale]
 
-`$$\Large{\log (N_t) = \log (N_{t-1}) + u + w_t}$$`
+`$$\huge{\log (N_t) = \log (N_{t-1}) + u + w_t}$$`
 
 ### .blue.center[which we can rewrite as]
 
-`$$\Large{x_t = x_{t-1} + u + w_t}$$`
+`$$\huge{x_t = x_{t-1} + u + w_t}$$`
 
 
 ---
@@ -397,7 +397,7 @@ class: inverse, center, middle
 
 ### .blue.center[If we assume that the errors are white noise]
 
-`$$\Large{w_t \sim \text{N}(0, q)}$$`
+`$$\huge{w_t \sim \text{N}(0, q)}$$`
 
 
 ---
@@ -406,11 +406,11 @@ class: inverse, center, middle
 
 ### .blue.center[If we assume that the errors are white noise]
 
-`$$\Large{w_t \sim \text{N}(0, q)}$$`
+`$$\huge{w_t \sim \text{N}(0, q)}$$`
 
 ### .blue.center[ then our model of populations dynamics]
 
-`$$\Large{x_t = x_{t-1} + u + w_t}$$`
+`$$\huge{x_t = x_{t-1} + u + w_t}$$`
 
 ### .center[.blue[is a] *biased random walk*]
 
@@ -435,7 +435,7 @@ class: inverse, center, middle
 
 ### .blue[ In log-space ]
 
-`$$\Large{\underbrace{y_t}_{\substack{\text{observed} \\ \text{counts}}} = \underbrace{x_t}_{\substack{\text{true} \\ \text{counts}}} + \underbrace{v_t}_{\substack{\text{observer} \\ \text{error}}} ~~ \text{with} ~~ v_t \sim \text{N}(0, r)}$$`
+`$$\huge{\underbrace{y_t}_{\substack{\text{observed} \\ \text{counts}}} = \underbrace{x_t}_{\substack{\text{true} \\ \text{counts}}} + \underbrace{v_t}_{\substack{\text{observer} \\ \text{error}}} ~~ \text{with} ~~ v_t \sim \text{N}(0, r)}$$`
 
 
 ---
@@ -475,7 +475,7 @@ class: center
 
 ## .center.blue[ Each _core area_ gets its own model ]
 
-`$$\Large{\begin{gathered}
+`$$\huge{\begin{gathered}
     x_{1,t} = x_{1,t-1} + u_1 + w_{1,t} \\
     x_{2,t} = x_{2,t-1} + u_2 + w_{2,t} \\
     x_{3,t} = x_{3,t-1} + u_3 + w_{3,t} \\
@@ -499,7 +499,7 @@ class: center
 
 ## .center.blue[ Example of 5 popns across 2 core areas (A &amp; B) ]
 
-`$$\Large{\begin{gathered}
+`$$\huge{\begin{gathered}
     y_{1,t} = x_{A,t} + v_{1,t} \\
     y_{2,t} = x_{A,t} + v_{2,t} \\
     \hline 
@@ -538,7 +538,7 @@ class: center, middle, inverse
 
 ## .center.blue[ Example of 5 popns from 2 core areas (_A_, _B_) ]
 
-`$$\Large{\begin{gathered}
+`$$\huge{\begin{gathered}
     y_{1,t} = x_{A,t} + v_{1,t} \\
     y_{2,t} = x_{A,t} + v_{2,t} \\
     \hline 
@@ -554,7 +554,7 @@ class: center, middle, inverse
 
 ## .center.blue[ Example of 5 popns from 2 core areas via 2 methods (_j_, _k_)]
 
-`$$\Large{\begin{gathered}
+`$$\huge{\begin{gathered}
     y_{1,t} = x_{A,t} + v_{1,t} \\
     y_{2,t} = x_{A,t} + v_{2,t} \\
     \hline 
@@ -563,7 +563,7 @@ class: center, middle, inverse
     y_{5,t} = x_{B,t} + v_{5,t}
   \end{gathered}}
   ~~~~~~~~~~~
-  \Large{\begin{gathered}
+  \huge{\begin{gathered}
     v_{1,t} \sim \text{N}(0, r_j) \\
     v_{2,t} \sim \text{N}(0, r_k) \\
     \hline 
@@ -703,8 +703,6 @@ background-size: 65%
 Status of bull trout in the Pacific Northwest is mixed 
 ]
 
-### .citation.purple[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#844870;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; scheuerl@uw.edu]
-
 
 ---
 
@@ -717,8 +715,6 @@ Status of bull trout in the Pacific Northwest is mixed
 &gt; ## .blue[
 Data quality affects our ability to assess trends
 ]
-
-### .citation.purple[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#844870;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; scheuerl@uw.edu]
 
 
 ---
@@ -736,8 +732,6 @@ Data quality affects our ability to assess trends
 &gt; ## .blue[
 State-space models can help 
 ]
-
-### .citation.purple[&lt;svg viewBox="0 0 512 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:#844870;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;path d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z"&gt;&lt;/path&gt;&lt;/svg&gt; scheuerl@uw.edu]
 
 
 ---
@@ -769,18 +763,6 @@ background-size: 63%
 # Long history
 
 &gt; ## .blue[ Problems acknowledged in the 1938 Mitchell Act ]
-
-
----
-
-# Recovery efforts
-
-&gt; ## .blue[ Actions involve 11 federal agencies ]
-
-&gt; ## .blue[ 1980 Northwest Power Act obligates BPA to provide equitable treatment to fish and wildlife]
-
-&gt; ## .blue[ Northwest Power and Conservation Council responsible for supporting conservation and
-determining whether actions are cost-effective ]
 
 
 ---
@@ -825,9 +807,13 @@ Chemicals
 
 ---
 
-class: inverse, middle
+# Recovery efforts
 
-&gt; # Solution?&lt;br&gt;&lt;br&gt;Spend some money on restoration activities
+&gt; ## .blue[ Actions involve 11 federal agencies ]
+
+&gt; ## .blue[ 1980 Northwest Power Act obligates BPA to provide equitable treatment to fish and wildlife]
+
+&gt; ## .blue[ Northwest Power &amp; Conservation Council responsible for determining whether actions are cost-effective ]
 
 
 ---
@@ -933,6 +919,13 @@ background-size: 70%
 
 ---
 
+# Our findings
+
+&gt; ## .blue[A 1% increase in spending in a year corresponds to a&lt;br&gt;0.075% increase in returns]
+
+
+---
+
 class: frimg, center
 background-image: url(figs/model_fits_h.png)
 background-position: 40% 80%
@@ -962,11 +955,46 @@ background-size: 70%
 
 ---
 
-# Returns of hatchery fish
+# Estimated spending effect
 
-&gt; ## .blue[Applied smolt-to-adult survival to hatchery releases]
+&gt; ## .blue[Model gives us the expected total adult returns]
 
-&gt; ## .blue[Calculated expected adult returns]
+`$$\huge{\hat{T} = \hat{H} + \hat{W}}$$`
+
+
+---
+
+# Estimated spending effect
+
+&gt; ## .blue[Model gives us the expected total adult returns]
+
+`$$\huge{\hat{T} = \hat{H} + \hat{W}}$$`
+
+&gt; ## .blue[Applying smolt-to-adult survival estimates to hatchery releases gives us estimated hatchery returns]
+
+`$$\huge{\hat{H} = \widehat{SAR} \times Releases}$$`
+
+
+---
+
+# Test of spending effect
+
+&gt; ## .blue[Null hypothesis:]
+
+`$$\huge{\hat{T} - \hat{H} \leq 0}$$` 
+
+
+---
+
+# Test of spending effect
+
+&gt; ## .blue[Null hypothesis:]
+
+`$$\huge{\hat{T} - \hat{H} \leq 0}$$` 
+
+&gt; ## .blue[We cannot reject this and conclude that]
+
+&gt; ## .red[No impact of conservation spending on wild salmon and steelhead]
 
 
 ---
